@@ -489,251 +489,252 @@
         "unit": "Unit 2",
         "image": "https://undraw.co/api/illustrations/swimming_pool"
     },
-    {
-        "word": "أطلّ/يطلّ على",
-        "english": "to look onto",
-        "type": "verb",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/look"
-    },
-    {
-        "word": "تقليديّ",
-        "english": "traditional",
-        "type": "adjective",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/traditional"
-    },
-    {
-        "word": "تكوّن/يتكوّن",
-        "english": "to consist",
-        "type": "verb",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/structure"
-    },
-    {
-        "word": "ثلّاجة/ثلّاجات",
-        "english": "fridge",
-        "type": "noun",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/fridge"
-    },
-    {
-        "word": "حديث",
-        "english": "modern",
-        "type": "adjective",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/modern"
-    },
-    {
-        "word": "حديقة/حدائق",
-        "english": "garden",
-        "type": "noun",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/garden"
-    },
-    {
-        "word": "حمّام/حمّامات",
-        "english": "bathroom",
-        "type": "noun",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/bathroom"
-    },
-    {
-        "word": "خاصّ",
-        "english": "private",
-        "type": "adjective",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/private"
-    },
-    {
-        "word": "دار/ديار",
-        "english": "house",
-        "type": "noun",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/house"
-    },
-    {
-        "word": "ساكن/سكّان",
-        "english": "resident",
-        "type": "noun",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/resident"
-    },
-    {
-        "word": "سلّم/سلالم",
-        "english": "stairs",
-        "type": "noun",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/stairs"
-    },
-    {
-        "word": "شرفة/شرفات",
-        "english": "balcony",
-        "type": "noun",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/balcony"
-    },
-    {
-        "word": "صالة/صالات",
-        "english": "hall",
-        "type": "noun",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/hall"
-    },
-    {
-        "word": "طابق/طوابق",
-        "english": "floor (storey)",
-        "type": "noun",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/floor"
-    },
-    {
-        "word": "غرفة جلوس",
-        "english": "sitting room",
-        "type": "noun",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/living_room"
-    },
-    {
-        "word": "غرفة معيشة",
-        "english": "living room",
-        "type": "noun",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/living_room"
-    },
-    {
-        "word": "غرفة نوم",
-        "english": "bedroom",
-        "type": "noun",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/bedroom"
-    },
-    {
-        "word": "غرفة/غرف",
-        "english": "room",
-        "type": "noun",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/room"
-    },
-    {
-        "word": "فرن/أفران",
-        "english": "cooker/oven",
-        "type": "noun",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/oven"
-    },
-    {
-        "word": "للإيجار",
-        "english": "for rent",
-        "type": "phrase",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/for_rent"
-    },
-    {
-        "word": "مريح",
-        "english": "comfortable",
-        "type": "adjective",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/comfortable"
-    },
-    {
-        "word": "مزدحم",
-        "english": "crowded",
-        "type": "adjective",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/crowded"
-    },
-    {
-        "word": "مصعد/مصاعد",
-        "english": "elevator",
-        "type": "noun",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/elevator"
-    },
-    {
-        "word": "مطبخ/مطابخ",
-        "english": "kitchen",
-        "type": "noun",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/kitchen"
-    },
-    {
-        "word": "مناسب",
-        "english": "suitable",
-        "type": "adjective",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/suitable"
-    },
-    {
-        "word": "منزل/منازل",
-        "english": "home",
-        "type": "noun",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/home"
-    },
-    {
-        "word": "هادئ",
-        "english": "quiet",
-        "type": "adjective",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/quiet"
-    },
-    {
-        "word": "واسع",
-        "english": "spacious",
-        "type": "adjective",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/spacious"
-    },
-    {
-        "word": "يوجد/توجد",
-        "english": "can be found",
-        "type": "verb",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/found"
-    },
-    {
-        "word": "غرفة سفرة",
-        "english": "dining room",
-        "type": "noun",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/dining_room"
-    },
-    {
-        "word": "متاح",
-        "english": "available",
-        "type": "adjective",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/available"
-    },
-    {
-        "word": "تكوّن/يتكوّن من",
-        "english": "to consist (of)",
-        "type": "verb",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/structure"
-    },
-    {
-        "word": "الإنترنت",
-        "english": "the Internet",
-        "type": "noun",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/internet"
-    },
-    {
-        "word": "تكييف هواء",
-        "english": "air-conditioning",
-        "type": "noun",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/air_conditioning"
-    },
-    {
-        "word": "حمّام سباحة",
-        "english": "swimming pool",
-        "type": "noun",
-        "unit": "Unit 2",
-        "image": "https://undraw.co/api/illustrations/swimming_pool"
-    },
+[
+  {
+    "word": "أحياناً",
+    "english": "sometimes",
+    "type": "adverb",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/sometimes"
+  },
+  {
+    "word": "أعدّ/يعدّ",
+    "english": "to prepare",
+    "type": "verb",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/prepare"
+  },
+  {
+    "word": "أغلق/يغلق",
+    "english": "to lock",
+    "type": "verb",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/lock"
+  },
+  {
+    "word": "استيقظ/يستيقظ",
+    "english": "to get up",
+    "type": "verb",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/get_up"
+  },
+  {
+    "word": "تاريخ الميلاد",
+    "english": "date of birth",
+    "type": "noun",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/date_of_birth"
+  },
+  {
+    "word": "تذكرة/تذاكر",
+    "english": "ticket",
+    "type": "noun",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/ticket"
+  },
+  {
+    "word": "حياة/حيوات",
+    "english": "life",
+    "type": "noun",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/life"
+  },
+  {
+    "word": "خبرة",
+    "english": "experience",
+    "type": "noun",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/experience"
+  },
+  {
+    "word": "دائماً",
+    "english": "always",
+    "type": "adverb",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/always"
+  },
+  {
+    "word": "راتب/رواتب",
+    "english": "salary",
+    "type": "noun",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/salary"
+  },
+  {
+    "word": "رتّب/يرتّب",
+    "english": "to tidy",
+    "type": "verb",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/tidy"
+  },
+  {
+    "word": "رجل أعمال",
+    "english": "businessman",
+    "type": "noun",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/businessman"
+  },
+  {
+    "word": "سيّدة أعمال",
+    "english": "businesswoman",
+    "type": "noun",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/businesswoman"
+  },
+  {
+    "word": "شركة/شركات",
+    "english": "company",
+    "type": "noun",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/company"
+  },
+  {
+    "word": "شيء/أشياء",
+    "english": "thing",
+    "type": "noun",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/thing"
+  },
+  {
+    "word": "طبيب/أطبّاء",
+    "english": "doctor",
+    "type": "noun",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/doctor"
+  },
+  {
+    "word": "طموح",
+    "english": "ambitious",
+    "type": "adjective",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/ambitious"
+  },
+  {
+    "word": "عادةً",
+    "english": "usually",
+    "type": "adverb",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/usually"
+  },
+  {
+    "word": "عامل/عمّال",
+    "english": "worker",
+    "type": "noun",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/worker"
+  },
+  {
+    "word": "قاد/يقود السيّارة",
+    "english": "to drive",
+    "type": "verb",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/drive"
+  },
+  {
+    "word": "مؤهّل/مؤهّلات",
+    "english": "qualification",
+    "type": "noun",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/qualification"
+  },
+  {
+    "word": "محامٍ/محامون",
+    "english": "lawyer",
+    "type": "noun",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/lawyer"
+  },
+  {
+    "word": "مدير/مدراء",
+    "english": "manager",
+    "type": "noun",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/manager"
+  },
+  {
+    "word": "مساعد/مساعدون",
+    "english": "assistant",
+    "type": "noun",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/assistant"
+  },
+  {
+    "word": "مطلوب",
+    "english": "wanted",
+    "type": "adjective",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/wanted"
+  },
+  {
+    "word": "مندوب/مندوبون",
+    "english": "representative",
+    "type": "noun",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/representative"
+  },
+  {
+    "word": "مهارة/مهارات",
+    "english": "skill",
+    "type": "noun",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/skill"
+  },
+  {
+    "word": "ورق/أوراق",
+    "english": "paper",
+    "type": "noun",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/paper"
+  },
+  {
+    "word": "وظيفة/وظائف",
+    "english": "position (job)",
+    "type": "noun",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/job"
+  },
+  {
+    "word": "صَحافيّ/صَحافيّون",
+    "english": "journalist",
+    "type": "noun",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/journalist"
+  },
+  {
+    "word": "متدرّب/متدرّبون",
+    "english": "intern/trainee",
+    "type": "noun",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/intern"
+  },
+  {
+    "word": "تدريب/تدريبات",
+    "english": "training",
+    "type": "noun",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/training"
+  },
+  {
+    "word": "تطوّع/يتطوّع",
+    "english": "to volunteer",
+    "type": "verb",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/volunteer"
+  },
+  {
+    "word": "سجّل/يسجّل الدخول",
+    "english": "to log in",
+    "type": "verb",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/login"
+  },
+  {
+    "word": "سجّل/يسجّل الخروج",
+    "english": "to log out",
+    "type": "verb",
+    "unit": "Unit 3",
+    "image": "https://undraw.co/api/illustrations/logout"
+  },
     {
         "word": "أحبّ/يحبّ",
         "english": "to like",
