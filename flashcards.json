@@ -1,1048 +1,2443 @@
 [
-  {
-    "word": "أصلاً",
-    "english": "originally",
-    "type": "adverb",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/1256/1256650.png"
-  },
-  {
-    "word": "أقام/يقيم",
-    "english": "to live/to reside (in a general area)",
-    "type": "verb",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/1946/1946436.png"
-  },
-  {
-    "word": "انتقل/ينتقل",
-    "english": "to move/to relocate",
-    "type": "verb",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/684/684908.png"
-  },
-  {
-    "word": "جدّ/أجداد",
-    "english": "grandfather",
-    "type": "noun",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/2991/2991146.png"
-  },
-  {
-    "word": "جدّة/جدّات",
-    "english": "grandmother",
-    "type": "noun",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/2991/2991143.png"
-  },
-  {
-    "word": "حفيد/أحفاد",
-    "english": "grandson",
-    "type": "noun",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/2922/2922561.png"
-  },
-  {
-    "word": "حفيدة/حفيدات",
-    "english": "granddaughter",
-    "type": "noun",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/2922/2922562.png"
-  },
-  {
-    "word": "حكيم",
-    "english": "wise",
-    "type": "adjective",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/1995/1995570.png"
-  },
-  {
-    "word": "خال/أخوال",
-    "english": "maternal uncle",
-    "type": "noun",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/2922/2922567.png"
-  },
-  {
-    "word": "خالة/خالات",
-    "english": "maternal aunt",
-    "type": "noun",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/2922/2922568.png"
-  },
-  {
-    "word": "ذكيّ",
-    "english": "intelligent",
-    "type": "adjective",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/2922/2922560.png"
-  },
-  {
-    "word": "رشيق",
-    "english": "graceful",
-    "type": "adjective",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/616/616408.png"
-  },
-  {
-    "word": "سكن/يسكن",
-    "english": "to live/to reside (in a specific place)",
-    "type": "verb",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/1946/1946436.png"
-  },
-  {
-    "word": "شخص/أشخاص",
-    "english": "person",
-    "type": "noun",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/1077/1077115.png"
-  },
-  {
-    "word": "شقّة/شقق",
-    "english": "apartment",
-    "type": "noun",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/1685/1685924.png"
-  },
-  {
-    "word": "شهير",
-    "english": "famous",
-    "type": "adjective",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/1087/1087514.png"
-  },
-  {
-    "word": "عائلة/عائلات",
-    "english": "family",
-    "type": "noun",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/1077/1077063.png"
-  },
-  {
-    "word": "عمّ/أعمام",
-    "english": "paternal uncle",
-    "type": "noun",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/2922/2922570.png"
-  },
-  {
-    "word": "عنوان/عناوين",
-    "english": "address",
-    "type": "noun",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/684/684908.png"
-  },
-  {
-    "word": "عنيد",
-    "english": "stubborn",
-    "type": "adjective",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/2922/2922558.png"
-  },
-  {
-    "word": "قرية/قرى",
-    "english": "village",
-    "type": "noun",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/3039/3039433.png"
-  },
-  {
-    "word": "كريم",
-    "english": "generous",
-    "type": "adjective",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/2190/2190586.png"
-  },
-  {
-    "word": "كسول",
-    "english": "lazy",
-    "type": "adjective",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/1995/1995566.png"
-  },
-  {
-    "word": "مات/يموت",
-    "english": "to die",
-    "type": "verb",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/1237/1237949.png"
-  },
-  {
-    "word": "محبوب",
-    "english": "popular",
-    "type": "adjective",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/616/616408.png"
-  },
-  {
-    "word": "موهوب",
-    "english": "talented",
-    "type": "adjective",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/616/616408.png"
-  },
-  {
-    "word": "نشيط",
-    "english": "active",
-    "type": "adjective",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/2922/2922559.png"
-  },
-  {
-    "word": "والدان",
-    "english": "parents",
-    "type": "noun",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/2922/2922563.png"
-  },
-  {
-    "word": "وُلِدَ",
-    "english": "was born",
-    "type": "verb",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/2917/2917998.png"
-  },
-  {
-    "word": "هاتف/هواتف",
-    "english": "telephone",
-    "type": "noun",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/597/597177.png"
-  },
-  {
-    "word": "رقم/أرقام",
-    "english": "number",
-    "type": "noun",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/2921/2921822.png"
-  },
-  {
-    "word": "رسالة/رسائل",
-    "english": "message",
-    "type": "noun",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/561/561127.png"
-  },
-  {
-    "word": "أديب/أدباء",
-    "english": "literary figure",
-    "type": "noun",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/2948/2948407.png"
-  },
-  {
-    "word": "موظّف/موظّفون",
-    "english": "employee",
-    "type": "noun",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/2922/2922539.png"
-  },
-  {
-    "word": "هاتف محمول",
-    "english": "mobile telephone",
-    "type": "noun",
-    "unit": "Unit 1",
-    "image": "https://cdn-icons-png.flaticon.com/512/597/597177.png"
-  },
-  {
-    "word": "أطلّ/يطلّ على",
-    "english": "to look onto",
-    "type": "verb",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/look"
-  },
-  {
-    "word": "تقليديّ",
-    "english": "traditional",
-    "type": "adjective",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/traditional"
-  },
-  {
-    "word": "تكوّن/يتكوّن",
-    "english": "to consist",
-    "type": "verb",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/structure"
-  },
-  {
-    "word": "ثلّاجة/ثلّاجات",
-    "english": "fridge",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/fridge"
-  },
-  {
-    "word": "حديث",
-    "english": "modern",
-    "type": "adjective",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/modern"
-  },
-  {
-    "word": "حديقة/حدائق",
-    "english": "garden",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/garden"
-  },
-  {
-    "word": "حمّام/حمّامات",
-    "english": "bathroom",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/bathroom"
-  },
-  {
-    "word": "خاصّ",
-    "english": "private",
-    "type": "adjective",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/private"
-  },
-  {
-    "word": "دار/ديار",
-    "english": "house",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/house"
-  },
-  {
-    "word": "ساكن/سكّان",
-    "english": "resident",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/resident"
-  },
-  {
-    "word": "سلّم/سلالم",
-    "english": "stairs",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/stairs"
-  },
-  {
-    "word": "شرفة/شرفات",
-    "english": "balcony",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/balcony"
-  },
-  {
-    "word": "صالة/صالات",
-    "english": "hall",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/hall"
-  },
-  {
-    "word": "طابق/طوابق",
-    "english": "floor (storey)",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/floor"
-  },
-  {
-    "word": "غرفة جلوس",
-    "english": "sitting room",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/living_room"
-  },
-  {
-    "word": "غرفة معيشة",
-    "english": "living room",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/living_room"
-  },
-  {
-    "word": "غرفة نوم",
-    "english": "bedroom",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/bedroom"
-  },
-  {
-    "word": "غرفة/غرف",
-    "english": "room",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/room"
-  },
-  {
-    "word": "فرن/أفران",
-    "english": "cooker/oven",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/oven"
-  },
-  {
-    "word": "للإيجار",
-    "english": "for rent",
-    "type": "phrase",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/for_rent"
-  },
-  {
-    "word": "مريح",
-    "english": "comfortable",
-    "type": "adjective",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/comfortable"
-  },
-  {
-    "word": "مزدحم",
-    "english": "crowded",
-    "type": "adjective",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/crowded"
-  },
-  {
-    "word": "مصعد/مصاعد",
-    "english": "elevator",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/elevator"
-  },
-  {
-    "word": "مطبخ/مطابخ",
-    "english": "kitchen",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/kitchen"
-  },
-  {
-    "word": "مناسب",
-    "english": "suitable",
-    "type": "adjective",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/suitable"
-  },
-  {
-    "word": "منزل/منازل",
-    "english": "home",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/home"
-  },
-  {
-    "word": "هادئ",
-    "english": "quiet",
-    "type": "adjective",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/quiet"
-  },
-  {
-    "word": "واسع",
-    "english": "spacious",
-    "type": "adjective",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/spacious"
-  },
-  {
-    "word": "يوجد/توجد",
-    "english": "can be found",
-    "type": "verb",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/found"
-  },
-  {
-    "word": "غرفة سفرة",
-    "english": "dining room",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/dining_room"
-  },
-  {
-    "word": "متاح",
-    "english": "available",
-    "type": "adjective",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/available"
-  },
-  {
-    "word": "تكوّن/يتكوّن من",
-    "english": "to consist (of)",
-    "type": "verb",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/structure"
-  },
-  {
-    "word": "الإنترنت",
-    "english": "the Internet",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/internet"
-  },
-  {
-    "word": "تكييف هواء",
-    "english": "air-conditioning",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/air_conditioning"
-  },
-  {
-    "word": "حمّام سباحة",
-    "english": "swimming pool",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/swimming_pool"
-  },
-  {
-    "word": "أطلّ/يطلّ على",
-    "english": "to look onto",
-    "type": "verb",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/look"
-  },
-  {
-    "word": "تقليديّ",
-    "english": "traditional",
-    "type": "adjective",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/traditional"
-  },
-  {
-    "word": "تكوّن/يتكوّن",
-    "english": "to consist",
-    "type": "verb",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/structure"
-  },
-  {
-    "word": "ثلّاجة/ثلّاجات",
-    "english": "fridge",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/fridge"
-  },
-  {
-    "word": "حديث",
-    "english": "modern",
-    "type": "adjective",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/modern"
-  },
-  {
-    "word": "حديقة/حدائق",
-    "english": "garden",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/garden"
-  },
-  {
-    "word": "حمّام/حمّامات",
-    "english": "bathroom",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/bathroom"
-  },
-  {
-    "word": "خاصّ",
-    "english": "private",
-    "type": "adjective",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/private"
-  },
-  {
-    "word": "دار/ديار",
-    "english": "house",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/house"
-  },
-  {
-    "word": "ساكن/سكّان",
-    "english": "resident",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/resident"
-  },
-  {
-    "word": "سلّم/سلالم",
-    "english": "stairs",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/stairs"
-  },
-  {
-    "word": "شرفة/شرفات",
-    "english": "balcony",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/balcony"
-  },
-  {
-    "word": "صالة/صالات",
-    "english": "hall",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/hall"
-  },
-  {
-    "word": "طابق/طوابق",
-    "english": "floor (storey)",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/floor"
-  },
-  {
-    "word": "غرفة جلوس",
-    "english": "sitting room",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/living_room"
-  },
-  {
-    "word": "غرفة معيشة",
-    "english": "living room",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/living_room"
-  },
-  {
-    "word": "غرفة نوم",
-    "english": "bedroom",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/bedroom"
-  },
-  {
-    "word": "غرفة/غرف",
-    "english": "room",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/room"
-  },
-  {
-    "word": "فرن/أفران",
-    "english": "cooker/oven",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/oven"
-  },
-  {
-    "word": "للإيجار",
-    "english": "for rent",
-    "type": "phrase",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/for_rent"
-  },
-  {
-    "word": "مريح",
-    "english": "comfortable",
-    "type": "adjective",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/comfortable"
-  },
-  {
-    "word": "مزدحم",
-    "english": "crowded",
-    "type": "adjective",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/crowded"
-  },
-  {
-    "word": "مصعد/مصاعد",
-    "english": "elevator",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/elevator"
-  },
-  {
-    "word": "مطبخ/مطابخ",
-    "english": "kitchen",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/kitchen"
-  },
-  {
-    "word": "مناسب",
-    "english": "suitable",
-    "type": "adjective",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/suitable"
-  },
-  {
-    "word": "منزل/منازل",
-    "english": "home",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/home"
-  },
-  {
-    "word": "هادئ",
-    "english": "quiet",
-    "type": "adjective",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/quiet"
-  },
-  {
-    "word": "واسع",
-    "english": "spacious",
-    "type": "adjective",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/spacious"
-  },
-  {
-    "word": "يوجد/توجد",
-    "english": "can be found",
-    "type": "verb",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/found"
-  },
-  {
-    "word": "غرفة سفرة",
-    "english": "dining room",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/dining_room"
-  },
-  {
-    "word": "متاح",
-    "english": "available",
-    "type": "adjective",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/available"
-  },
-  {
-    "word": "تكوّن/يتكوّن من",
-    "english": "to consist (of)",
-    "type": "verb",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/structure"
-  },
-  {
-    "word": "الإنترنت",
-    "english": "the Internet",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/internet"
-  },
-  {
-    "word": "تكييف هواء",
-    "english": "air-conditioning",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/air_conditioning"
-  },
-  {
-    "word": "حمّام سباحة",
-    "english": "swimming pool",
-    "type": "noun",
-    "unit": "Unit 2",
-    "image": "https://undraw.co/api/illustrations/swimming_pool"
-},
-{ "word": "أحبّ/يحبّ", "english": "to like", "type": "verb", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/like" },
-  { "word": "ترفيه", "english": "leisure", "type": "noun", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/leisure" },
-  { "word": "تصوير", "english": "photography", "type": "noun", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/photography" },
-  { "word": "تنس", "english": "tennis", "type": "noun", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/tennis" },
-  { "word": "درّب/يدرّب", "english": "to coach", "type": "verb", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/coach" },
-  { "word": "ركب/يركب", "english": "to ride", "type": "verb", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/ride" },
-  { "word": "ركوب الخيل", "english": "horse riding", "type": "noun", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/horse_riding" },
-  { "word": "سباحة", "english": "swimming", "type": "noun", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/swimming" },
-  { "word": "شاهد/يشاهد", "english": "to view", "type": "verb", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/view" },
-  { "word": "صوّر/يصوّر", "english": "to photograph", "type": "verb", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/photograph" },
-  { "word": "صيد السمك", "english": "fishing", "type": "noun", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/fishing" },
-  { "word": "فضّل/يفضّل", "english": "to prefer", "type": "verb", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/prefer" },
-  { "word": "فنّ/فنون", "english": "art", "type": "noun", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/art" },
-  { "word": "كرة السلّة", "english": "basketball", "type": "noun", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/basketball" },
-  { "word": "كرة القدم", "english": "football (soccer)", "type": "noun", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/football" },
-  { "word": "كره/يكره", "english": "to hate", "type": "verb", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/hate" },
-  { "word": "لاعب/لاعبون", "english": "player", "type": "noun", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/player" },
-  { "word": "مثير", "english": "exciting", "type": "adjective", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/exciting" },
-  { "word": "مشغول", "english": "busy", "type": "adjective", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/busy" },
-  { "word": "معرض/معارض", "english": "exhibition", "type": "noun", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/exhibition" },
-  { "word": "مفضّل", "english": "favourite", "type": "adjective", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/favourite" },
-  { "word": "مفيد", "english": "beneficial", "type": "adjective", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/beneficial" },
-  { "word": "مكتبة/مكتبات", "english": "library", "type": "noun", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/library" },
-  { "word": "ممتاز", "english": "excellent", "type": "adjective", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/excellent" },
-  { "word": "ممتع", "english": "enjoyable", "type": "adjective", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/enjoyable" },
-  { "word": "مملّ", "english": "boring", "type": "adjective", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/boring" },
-  { "word": "نادٍ/نوادٍ", "english": "club", "type": "noun", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/club" },
-  { "word": "نشاط/أنشطة", "english": "activity", "type": "noun", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/activity" },
-  { "word": "هواية/هوايات", "english": "hobby", "type": "noun", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/hobby" },
-  { "word": "وقت الفراغ", "english": "free time", "type": "noun", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/free_time" },
-  { "word": "تابع/يتابع", "english": "to follow", "type": "verb", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/follow" },
-  { "word": "العدو", "english": "running", "type": "noun", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/running" },
-  { "word": "فرديّ", "english": "individual", "type": "adjective", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/individual" },
-  { "word": "جماعيّ", "english": "collective", "type": "adjective", "unit": "Unit 4", "image": "https://undraw.co/api/illustrations/collective" },
-
-  { "word": "إشارة المرور", "english": "traffic lights", "type": "noun", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/traffic_lights" },
-  { "word": "اشترى/يشتري", "english": "to buy", "type": "verb", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/buy" },
-  { "word": "بطاقة بريديّة", "english": "postcard", "type": "noun", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/postcard" },
-  { "word": "توجّه/يتوجّه نحو", "english": "to head towards", "type": "verb", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/head_towards" },
-  { "word": "حجّ", "english": "pilgrimage", "type": "noun", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/pilgrimage" },
-  { "word": "خائف", "english": "afraid", "type": "adjective", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/afraid" },
-  { "word": "دلّ/يدلّ", "english": "to show (the way)", "type": "verb", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/show_way" },
-  { "word": "رحلة/رحلات", "english": "journey", "type": "noun", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/journey" },
-  { "word": "سعيد", "english": "happy", "type": "adjective", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/happy" },
-  { "word": "سفر", "english": "travel", "type": "noun", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/travel" },
-  { "word": "سياحة", "english": "tourism", "type": "noun", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/tourism" },
-  { "word": "شعر/يشعر", "english": "to feel", "type": "verb", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/feel" },
-  { "word": "طريق/طرق", "english": "way, road", "type": "noun", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/road" },
-  { "word": "عجيب", "english": "wonderful", "type": "adjective", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/wonderful" },
-  { "word": "على طول", "english": "straight on", "type": "adverb", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/straight_on" },
-  { "word": "غادر/يغادر", "english": "to depart", "type": "verb", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/depart" },
-  { "word": "قلعة/قلاع", "english": "fort, castle", "type": "noun", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/castle" },
-  { "word": "ماشياً", "english": "on foot", "type": "adverb", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/on_foot" },
-  { "word": "محطّة/محطّات", "english": "station", "type": "noun", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/station" },
-  { "word": "مركز التسوّق", "english": "shopping centre", "type": "noun", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/shopping_centre" },
-  { "word": "مركز الرياضة", "english": "sports centre", "type": "noun", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/sports_centre" },
-  { "word": "مركز الشرطة", "english": "police station", "type": "noun", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/police_station" },
-  { "word": "مركز/مراكز", "english": "centre", "type": "noun", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/centre" },
-  { "word": "مكتب البريد", "english": "post office", "type": "noun", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/post_office" },
-  { "word": "مكتب/مكاتب", "english": "office", "type": "noun", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/office" },
-  { "word": "ميدان/ميادين", "english": "square (town)", "type": "noun", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/town_square" },
-  { "word": "ناصية/نواصٍ", "english": "corner", "type": "noun", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/corner" },
-  { "word": "نقل", "english": "transportation", "type": "noun", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/transportation" },
-  { "word": "واحة/واحات", "english": "oasis", "type": "noun", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/oasis" },
-  { "word": "نخلة/نخيل", "english": "palm tree", "type": "noun", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/palm_tree" },
-  { "word": "استفسر/يستفسر", "english": "to enquire", "type": "verb", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/enquire" },
-  { "word": "مسروقات", "english": "stolen items", "type": "noun", "unit": "Unit 5", "image": "https://undraw.co/api/illustrations/stolen_items" }
-
-  { "word": "أسلوب/أساليب", "english": "method", "type": "noun", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/method" },
-  { "word": "أفطر/يفطر", "english": "to eat breakfast", "type": "verb", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/breakfast" },
-  { "word": "استهلك/يستهلك", "english": "to consume", "type": "verb", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/consume" },
-  { "word": "بقّالة/بقّالات", "english": "grocery", "type": "noun", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/grocery" },
-  { "word": "تمر", "english": "dates", "type": "noun", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/dates" },
-  { "word": "تناول/يتناول", "english": "to eat, partake", "type": "verb", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/eat" },
-  { "word": "ثوم", "english": "garlic", "type": "noun", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/garlic" },
-  { "word": "حلويات", "english": "sweets, desserts", "type": "noun", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/dessert" },
-  { "word": "خضريّ/خضريّون", "english": "greengrocer", "type": "noun", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/greengrocer" },
-  { "word": "سعر/أسعار", "english": "price", "type": "noun", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/price" },
-  { "word": "سلاطة", "english": "salad", "type": "noun", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/salad" },
-  { "word": "صوم", "english": "fast, fasting", "type": "noun", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/fasting" },
-  { "word": "طعام/أطعمة", "english": "food", "type": "noun", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/food" },
-  { "word": "غذاء/أغذية", "english": "food (stuff)", "type": "noun", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/food_stuff" },
-  { "word": "في الفرن", "english": "baked", "type": "adjective", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/baked" },
-  { "word": "كمّية/كمّيات", "english": "quantity", "type": "noun", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/quantity" },
-  { "word": "كوب/أكواب", "english": "glass, cup (for measuring)", "type": "noun", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/glass" },
-  { "word": "محشي", "english": "stuffed", "type": "adjective", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/stuffed" },
-  { "word": "محلّ/محلّات", "english": "shop (store)", "type": "noun", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/shop" },
-  { "word": "مسلوق", "english": "boiled", "type": "adjective", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/boiled" },
-  { "word": "مشوي", "english": "grilled", "type": "adjective", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/grilled" },
-  { "word": "مفروم", "english": "minced", "type": "adjective", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/minced" },
-  { "word": "مقلي", "english": "fried", "type": "adjective", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/fried" },
-  { "word": "ملعقة/ملاعق", "english": "spoon", "type": "noun", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/spoon" },
-  { "word": "نعناع", "english": "mint", "type": "noun", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/mint" },
-  { "word": "وجبة/وجبات", "english": "meal", "type": "noun", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/meal" },
-  { "word": "خالٍ من", "english": "free from", "type": "adjective", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/free_from" },
-  { "word": "نباتيّ", "english": "vegetarian", "type": "adjective", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/vegetarian" },
-  { "word": "حساسيّة/حساسيّات", "english": "allergy", "type": "noun", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/allergy" },
-  { "word": "مكسّرات", "english": "nuts", "type": "noun", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/nuts" },
-  { "word": "منتجات", "english": "products", "type": "noun", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/products" },
-  { "word": "تطبيق/تطبيقات", "english": "app", "type": "noun", "unit": "Unit 6", "image": "https://undraw.co/api/illustrations/app" },
-
-  { "word": "أنيق", "english": "elegant", "unit": "Unit 7" },
-  { "word": "إمرأة/نساء", "english": "woman", "unit": "Unit 7" },
-  { "word": "بدلة/بدل", "english": "suit", "unit": "Unit 7" },
-  { "word": "بنطلون/بنطلونات، سروال/سراويل", "english": "trousers", "unit": "Unit 7" },
-  { "word": "جرّب/يجرّب", "english": "to try on, test", "unit": "Unit 7" },
-  { "word": "جورب/جوارب", "english": "sock", "unit": "Unit 7" },
-  { "word": "جيب/جيوب", "english": "pocket", "unit": "Unit 7" },
-  { "word": "جيبة/جيبات، تنّورة/تنّورات", "english": "skirt", "unit": "Unit 7" },
-  { "word": "حذاء/أحذية", "english": "shoe", "unit": "Unit 7" },
-  { "word": "حزام/أحزمة", "english": "belt", "unit": "Unit 7" },
-  { "word": "داكن", "english": "dark (colour)", "unit": "Unit 7" },
-  { "word": "ذهبيّ", "english": "gold (adj)", "unit": "Unit 7" },
-  { "word": "رماديّ", "english": "grey", "unit": "Unit 7" },
-  { "word": "زاهٍ", "english": "bright (colour)", "unit": "Unit 7" },
-  { "word": "سترة/ستر", "english": "jacket", "unit": "Unit 7" },
-  { "word": "صمّم/يصمّم", "english": "to design", "unit": "Unit 7" },
-  { "word": "صندل/صنادل", "english": "sandals", "unit": "Unit 7" },
-  { "word": "صوف", "english": "wool", "unit": "Unit 7" },
-  { "word": "فاتح", "english": "light (colour)", "unit": "Unit 7" },
-  { "word": "فستان/فساتين", "english": "dress", "unit": "Unit 7" },
-  { "word": "فضّيّ", "english": "silver (adj)", "unit": "Unit 7" },
-  { "word": "قميص/قمصان", "english": "shirt", "unit": "Unit 7" },
-  { "word": "كمّ/أكمام", "english": "sleeve", "unit": "Unit 7" },
-  { "word": "مشغول باليد", "english": "handmade", "unit": "Unit 7" },
-  { "word": "معرض الأزياء", "english": "clothes show", "unit": "Unit 7" },
-  { "word": "معطف/معاطف", "english": "coat", "unit": "Unit 7" },
-  { "word": "مقاس/مقاسات", "english": "size", "unit": "Unit 7" },
-  { "word": "ناس", "english": "people", "unit": "Unit 7" },
-  { "word": "نظّارة/نظّارات", "english": "glasses", "unit": "Unit 7" },
-  { "word": "ورديّ", "english": "pink", "unit": "Unit 7" },
-  { "word": "حجاب/أحجبة", "english": "hijab", "unit": "Unit 7" },
-  { "word": "محتشم", "english": "modest", "unit": "Unit 7" },
-  { "word": "محايد", "english": "neutral", "unit": "Unit 7" },
-  { "word": "فضفاض", "english": "flowing", "unit": "Unit 7" },
-
-  
-  { "word": "أجاد/يجيد", "english": "to be good at", "unit": "Unit 8" },
-  { "word": "أعطى/يعطي", "english": "to give", "unit": "Unit 8" },
-  { "word": "إيجابيّ", "english": "positive", "unit": "Unit 8" },
-  { "word": "ابتدائيّ", "english": "primary (school)", "unit": "Unit 8" },
-  { "word": "التجارة", "english": "business studies", "unit": "Unit 8" },
-  { "word": "الحقوق", "english": "law (study)", "unit": "Unit 8" },
-  { "word": "الطبّ", "english": "medicine (study)", "unit": "Unit 8" },
-  { "word": "امتحان/امتحانات", "english": "exam", "unit": "Unit 8" },
-  { "word": "تدريس", "english": "teaching", "unit": "Unit 8" },
-  { "word": "تعليم", "english": "education", "unit": "Unit 8" },
-  { "word": "تعليمات", "english": "instructions", "unit": "Unit 8" },
-  { "word": "تعلّم/يتعلّم", "english": "to learn", "unit": "Unit 8" },
-  { "word": "ثانويّ", "english": "secondary (school)", "unit": "Unit 8" },
-  { "word": "جملة/جمل", "english": "sentence", "unit": "Unit 8" },
-  { "word": "دراسة", "english": "studying", "unit": "Unit 8" },
-  { "word": "دورة/دورات", "english": "course", "unit": "Unit 8" },
-  { "word": "سؤال/أسئلة", "english": "question", "unit": "Unit 8" },
-  { "word": "سجّل/يسجّل", "english": "to enrol", "unit": "Unit 8" },
-  { "word": "سلبيّ", "english": "negative", "unit": "Unit 8" },
-  { "word": "شرح/يشرح", "english": "to explain", "unit": "Unit 8" },
-  { "word": "صفّ/صفوف", "english": "class, grade", "unit": "Unit 8" },
-  { "word": "علم/علوم", "english": "science", "unit": "Unit 8" },
-  { "word": "علّم/يعلّم", "english": "to instruct", "unit": "Unit 8" },
-  { "word": "مادّة/موادّ", "english": "subject", "unit": "Unit 8" },
-  { "word": "متفوّق", "english": "excelling", "unit": "Unit 8" },
-  { "word": "معلّم/معلّمون", "english": "instructor", "unit": "Unit 8" },
-  { "word": "معنى/معانٍ", "english": "meaning", "unit": "Unit 8" },
-  { "word": "ممنوع", "english": "forbidden", "unit": "Unit 8" },
-  { "word": "نصّ/نصوص", "english": "text", "unit": "Unit 8" },
-  { "word": "دراسات الحاسوب", "english": "computer studies", "unit": "Unit 8" },
-  { "word": "لغة/لغات", "english": "language", "unit": "Unit 8" },
-  { "word": "مؤسّسة/مؤسّسات", "english": "institution", "unit": "Unit 8" },
-  { "word": "إجباريّ", "english": "compulsory", "unit": "Unit 8" },
-  { "word": "اختياريّ", "english": "optional", "unit": "Unit 8" },
-
-  { "word": "أخبار", "english": "news", "unit": "Unit 9" },
-  { "word": "احتفل/يحتفل", "english": "to celebrate", "unit": "Unit 9" },
-  { "word": "السياسة", "english": "politics", "unit": "Unit 9" },
-  { "word": "المال", "english": "finance", "unit": "Unit 9" },
-  { "word": "المجتمع", "english": "society", "unit": "Unit 9" },
-  { "word": "بثّ", "english": "transmission", "unit": "Unit 9" },
-  { "word": "تحليل", "english": "analysis", "unit": "Unit 9" },
-  { "word": "تسويق", "english": "marketing", "unit": "Unit 9" },
-  { "word": "حيّ", "english": "live", "unit": "Unit 9" },
-  { "word": "دوليّ", "english": "international", "unit": "Unit 9" },
-  { "word": "شجّع/يشجّع", "english": "to encourage", "unit": "Unit 9" },
-  { "word": "شعبيّ", "english": "popular", "unit": "Unit 9" },
-  { "word": "فائدة/فوائد", "english": "interest, benefit", "unit": "Unit 9" },
-  { "word": "قارن/يقارن", "english": "to compare", "unit": "Unit 9" },
-  { "word": "قانون/قوانين", "english": "law, statute", "unit": "Unit 9" },
-  { "word": "قناة/قنوات", "english": "channel", "unit": "Unit 9" },
-  { "word": "محلّيّ", "english": "local", "unit": "Unit 9" },
-  { "word": "مدوّنة/مدوّنات", "english": "blog", "unit": "Unit 9" },
-  { "word": "مذيع/مذيعون", "english": "broadcaster", "unit": "Unit 9" },
-  { "word": "مستمع/مستمعون", "english": "listener", "unit": "Unit 9" },
-  { "word": "مسجّل", "english": "recorded", "unit": "Unit 9" },
-  { "word": "مشاهد/مشاهدون", "english": "viewer", "unit": "Unit 9" },
-  { "word": "مصدر/مصادر", "english": "source", "unit": "Unit 9" },
-  { "word": "منتدىً/منتديات", "english": "forum", "unit": "Unit 9" },
-  { "word": "موضوع/مواضيع", "english": "topic", "unit": "Unit 9" },
-  { "word": "نجاح/نجاحات", "english": "success", "unit": "Unit 9" },
-  { "word": "وسائل الإعلام", "english": "media", "unit": "Unit 9" },
-  { "word": "موقع/مواقع", "english": "site, website", "unit": "Unit 9" },
-  { "word": "تغريدة/تغريدات", "english": "tweet", "unit": "Unit 9" },
-  { "word": "حاسوب/حواسيب", "english": "computer", "unit": "Unit 9" },
-  { "word": "تحميل", "english": "download", "unit": "Unit 9" },
-  { "word": "رقميّ", "english": "digital", "unit": "Unit 9" },
-  { "word": "مطوّر/مطوّرون", "english": "developer", "unit": "Unit 9" },
-
-  { "word": "أدار/يدير", "english": "to operate", "unit": "Unit 10" },
-  { "word": "أوقف/يوقف", "english": "to prevent", "unit": "Unit 10" },
-  { "word": "إعادة تدوير", "english": "recycling", "unit": "Unit 10" },
-  { "word": "استخرج/يستخرج", "english": "to extract", "unit": "Unit 10" },
-  { "word": "اقتصد/يقتصد في", "english": "to conserve", "unit": "Unit 10" },
-  { "word": "الخريف", "english": "autumn", "unit": "Unit 10" },
-  { "word": "الربيع", "english": "spring", "unit": "Unit 10" },
-  { "word": "الشتاء", "english": "winter", "unit": "Unit 10" },
-  { "word": "الصيف", "english": "summer", "unit": "Unit 10" },
-  { "word": "النشرة الجوّيّة", "english": "weather forecast", "unit": "Unit 10" },
-  { "word": "بيئة/بيئات", "english": "environment", "unit": "Unit 10" },
-  { "word": "تراوح/يتراوح", "english": "to vary", "unit": "Unit 10" },
-  { "word": "تغيير المناخ", "english": "climate change", "unit": "Unit 10" },
-  { "word": "تلوّث", "english": "pollution", "unit": "Unit 10" },
-  { "word": "ثلج/ثلوج", "english": "snow", "unit": "Unit 10" },
-  { "word": "جافّ", "english": "dry", "unit": "Unit 10" },
-  { "word": "جوّ/أجواء", "english": "atmosphere, weather", "unit": "Unit 10" },
-  { "word": "ريح/رياح", "english": "wind", "unit": "Unit 10" },
-  { "word": "سحابة/سحب", "english": "cloud", "unit": "Unit 10" },
-  { "word": "صديق للبيئة", "english": "environmentally friendly", "unit": "Unit 10" },
-  { "word": "صناعيّ", "english": "manmade", "unit": "Unit 10" },
-  { "word": "عاصفة/عواصف", "english": "storm", "unit": "Unit 10" },
-  { "word": "عبّأ/يعبّئ", "english": "to package", "unit": "Unit 10" },
-  { "word": "عضويّ", "english": "organic", "unit": "Unit 10" },
-  { "word": "مثلج", "english": "snowy", "unit": "Unit 10" },
-  { "word": "مشروع/مشروعات", "english": "project", "unit": "Unit 10" },
-  { "word": "مشمس", "english": "sunny", "unit": "Unit 10" },
-  { "word": "مطر/أمطار", "english": "rain", "unit": "Unit 10" },
-  { "word": "ممطر", "english": "rainy", "unit": "Unit 10" },
-  { "word": "مناخ/مناخات", "english": "climate", "unit": "Unit 10" },
-  { "word": "تحدٍّ/تحدّيات", "english": "challenge", "unit": "Unit 10" },
-  { "word": "محافظة", "english": "conservation", "unit": "Unit 10" },
-  { "word": "مرجان", "english": "coral", "unit": "Unit 10" },
-  { "word": "مورد/موارد", "english": "resources", "unit": "Unit 10" },
-  { "word": "مستدام", "english": "sustainable", "unit": "Unit 10" },
-  { "word": "استهلاك", "english": "consumption", "unit": "Unit 10" },
-
-  { "word": "أذن/آذان", "english": "ear", "unit": "Unit 11" },
-  { "word": "أقلع/يقلع", "english": "to give up", "unit": "Unit 11" },
-  { "word": "ألم/آلام", "english": "pain", "unit": "Unit 11" },
-  { "word": "أنف/أنوف", "english": "nose", "unit": "Unit 11" },
-  { "word": "إصبع/أصابع", "english": "finger", "unit": "Unit 11" },
-  { "word": "بطن/بطون، معدة/معد", "english": "stomach", "unit": "Unit 11" },
-  { "word": "تدخين", "english": "smoking", "unit": "Unit 11" },
-  { "word": "جسم/أجسام", "english": "body", "unit": "Unit 11" },
-  { "word": "حبّة/حبوب", "english": "pill", "unit": "Unit 11" },
-  { "word": "دم", "english": "blood", "unit": "Unit 11" },
-  { "word": "دهنيّ", "english": "fatty", "unit": "Unit 11" },
-  { "word": "دواء/أدوية", "english": "medicine", "unit": "Unit 11" },
-  { "word": "ذراع/أذرع", "english": "arm", "unit": "Unit 11" },
-  { "word": "رأس/رؤوس", "english": "head", "unit": "Unit 11" },
-  { "word": "رجل/أرجل، ساق/سيقان", "english": "leg", "unit": "Unit 11" },
-  { "word": "زائد", "english": "excessive", "unit": "Unit 11" },
-  { "word": "سبّب/يسبّب", "english": "to cause", "unit": "Unit 11" },
-  { "word": "سعادة", "english": "happiness", "unit": "Unit 11" },
-  { "word": "سنّ/أسنان", "english": "teeth", "unit": "Unit 11" },
-  { "word": "صداع", "english": "headache", "unit": "Unit 11" },
-  { "word": "صدر/صدور", "english": "chest", "unit": "Unit 11" },
-  { "word": "ضرّ/يضرّ", "english": "to damage", "unit": "Unit 11" },
-  { "word": "عين/عيون", "english": "eye", "unit": "Unit 11" },
-  { "word": "فم/أفواه", "english": "mouth", "unit": "Unit 11" },
-  { "word": "قدم/أقدام", "english": "foot", "unit": "Unit 11" },
-  { "word": "مرض/أمراض", "english": "illness", "unit": "Unit 11" },
-  { "word": "مصاب", "english": "suffering", "unit": "Unit 11" },
-  { "word": "وجه/وجوه", "english": "face", "unit": "Unit 11" },
-  { "word": "يد/أيادٍ", "english": "hand", "unit": "Unit 11" },
-  { "word": "ظهر/ظهور", "english": "back", "unit": "Unit 11" },
-  { "word": "كتف/أكتاف", "english": "shoulder", "unit": "Unit 11" },
-  { "word": "حلق/حلوق", "english": "throat", "unit": "Unit 11" },
-  { "word": "ملحوظ", "english": "noticeable", "unit": "Unit 11" },
-  { "word": "شاسع", "english": "immense", "unit": "Unit 11" },
-
-  { "word": "أغاني الشباب", "english": "pop songs", "unit": "Unit 12" },
-  { "word": "أغنية/أغانٍ", "english": "song", "unit": "Unit 12" },
-  { "word": "الخيال العلميّ", "english": "science fiction", "unit": "Unit 12" },
-  { "word": "بطل/أبطال", "english": "hero", "unit": "Unit 12" },
-  { "word": "تأثير/تأثيرات", "english": "effect", "unit": "Unit 12" },
-  { "word": "تاريخيّ", "english": "historical", "unit": "Unit 12" },
-  { "word": "تسجيليّ", "english": "documentary", "unit": "Unit 12" },
-  { "word": "حدث/أحداث", "english": "event", "unit": "Unit 12" },
-  { "word": "حرب/حروب", "english": "war", "unit": "Unit 12" },
-  { "word": "دار/يدور حول", "english": "to concern, to be about", "unit": "Unit 12" },
-  { "word": "راقص/راقصون", "english": "dancer", "unit": "Unit 12" },
-  { "word": "رعب", "english": "horror", "unit": "Unit 12" },
-  { "word": "رقص", "english": "dance", "unit": "Unit 12" },
-  { "word": "رواية/روايات", "english": "novel", "unit": "Unit 12" },
-  { "word": "شاعر/شعراء", "english": "poet", "unit": "Unit 12" },
-  { "word": "شعر/أشعار", "english": "poetry", "unit": "Unit 12" },
-  { "word": "غراميّ", "english": "romantic", "unit": "Unit 12" },
-  { "word": "قرن/قرون", "english": "century", "unit": "Unit 12" },
-  { "word": "مؤثّر", "english": "moving", "unit": "Unit 12" },
-  { "word": "مؤلّف/مؤلّفون", "english": "writer, composer", "unit": "Unit 12" },
-  { "word": "مجموعة/مجموعات", "english": "group", "unit": "Unit 12" },
-  { "word": "مجهول", "english": "unknown", "unit": "Unit 12" },
-  { "word": "مخرج/مخرجون", "english": "director", "unit": "Unit 12" },
-  { "word": "مسرحيّة/مسرحيّات", "english": "play", "unit": "Unit 12" },
-  { "word": "من بطولة", "english": "starring", "unit": "Unit 12" },
-  { "word": "من تأليف", "english": "written by", "unit": "Unit 12" },
-  { "word": "موسيقيّ/موسيقيّون", "english": "musician", "unit": "Unit 12" },
-  { "word": "نقد", "english": "criticism, review", "unit": "Unit 12" },
-  { "word": "هزليّ", "english": "comic", "unit": "Unit 12" },
-  { "word": "عود/أعواد", "english": "oud", "unit": "Unit 12" },
-  { "word": "آلة/آلات", "english": "instrument", "unit": "Unit 12" },
-  { "word": "عزف/يعزف", "english": "to play (an instrument)", "unit": "Unit 12" },
-  { "word": "شعبيّ", "english": "folk, popular", "unit": "Unit 12" }
+    {
+        "word": "أصلاً",
+        "english": "originally",
+        "type": "adverb",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/1256/1256650.png"
+    },
+    {
+        "word": "أقام/يقيم",
+        "english": "to live/to reside (in a general area)",
+        "type": "verb",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/1946/1946436.png"
+    },
+    {
+        "word": "انتقل/ينتقل",
+        "english": "to move/to relocate",
+        "type": "verb",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/684/684908.png"
+    },
+    {
+        "word": "جدّ/أجداد",
+        "english": "grandfather",
+        "type": "noun",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/2991/2991146.png"
+    },
+    {
+        "word": "جدّة/جدّات",
+        "english": "grandmother",
+        "type": "noun",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/2991/2991143.png"
+    },
+    {
+        "word": "حفيد/أحفاد",
+        "english": "grandson",
+        "type": "noun",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/2922/2922561.png"
+    },
+    {
+        "word": "حفيدة/حفيدات",
+        "english": "granddaughter",
+        "type": "noun",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/2922/2922562.png"
+    },
+    {
+        "word": "حكيم",
+        "english": "wise",
+        "type": "adjective",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/1995/1995570.png"
+    },
+    {
+        "word": "خال/أخوال",
+        "english": "maternal uncle",
+        "type": "noun",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/2922/2922567.png"
+    },
+    {
+        "word": "خالة/خالات",
+        "english": "maternal aunt",
+        "type": "noun",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/2922/2922568.png"
+    },
+    {
+        "word": "ذكيّ",
+        "english": "intelligent",
+        "type": "adjective",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/2922/2922560.png"
+    },
+    {
+        "word": "رشيق",
+        "english": "graceful",
+        "type": "adjective",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/616/616408.png"
+    },
+    {
+        "word": "سكن/يسكن",
+        "english": "to live/to reside (in a specific place)",
+        "type": "verb",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/1946/1946436.png"
+    },
+    {
+        "word": "شخص/أشخاص",
+        "english": "person",
+        "type": "noun",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/1077/1077115.png"
+    },
+    {
+        "word": "شقّة/شقق",
+        "english": "apartment",
+        "type": "noun",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/1685/1685924.png"
+    },
+    {
+        "word": "شهير",
+        "english": "famous",
+        "type": "adjective",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/1087/1087514.png"
+    },
+    {
+        "word": "عائلة/عائلات",
+        "english": "family",
+        "type": "noun",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/1077/1077063.png"
+    },
+    {
+        "word": "عمّ/أعمام",
+        "english": "paternal uncle",
+        "type": "noun",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/2922/2922570.png"
+    },
+    {
+        "word": "عنوان/عناوين",
+        "english": "address",
+        "type": "noun",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/684/684908.png"
+    },
+    {
+        "word": "عنيد",
+        "english": "stubborn",
+        "type": "adjective",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/2922/2922558.png"
+    },
+    {
+        "word": "قرية/قرى",
+        "english": "village",
+        "type": "noun",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/3039/3039433.png"
+    },
+    {
+        "word": "كريم",
+        "english": "generous",
+        "type": "adjective",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/2190/2190586.png"
+    },
+    {
+        "word": "كسول",
+        "english": "lazy",
+        "type": "adjective",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/1995/1995566.png"
+    },
+    {
+        "word": "مات/يموت",
+        "english": "to die",
+        "type": "verb",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/1237/1237949.png"
+    },
+    {
+        "word": "محبوب",
+        "english": "popular",
+        "type": "adjective",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/616/616408.png"
+    },
+    {
+        "word": "موهوب",
+        "english": "talented",
+        "type": "adjective",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/616/616408.png"
+    },
+    {
+        "word": "نشيط",
+        "english": "active",
+        "type": "adjective",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/2922/2922559.png"
+    },
+    {
+        "word": "والدان",
+        "english": "parents",
+        "type": "noun",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/2922/2922563.png"
+    },
+    {
+        "word": "وُلِدَ",
+        "english": "was born",
+        "type": "verb",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/2917/2917998.png"
+    },
+    {
+        "word": "هاتف/هواتف",
+        "english": "telephone",
+        "type": "noun",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/597/597177.png"
+    },
+    {
+        "word": "رقم/أرقام",
+        "english": "number",
+        "type": "noun",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/2921/2921822.png"
+    },
+    {
+        "word": "رسالة/رسائل",
+        "english": "message",
+        "type": "noun",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/561/561127.png"
+    },
+    {
+        "word": "أديب/أدباء",
+        "english": "literary figure",
+        "type": "noun",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/2948/2948407.png"
+    },
+    {
+        "word": "موظّف/موظّفون",
+        "english": "employee",
+        "type": "noun",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/2922/2922539.png"
+    },
+    {
+        "word": "هاتف محمول",
+        "english": "mobile telephone",
+        "type": "noun",
+        "unit": "Unit 1",
+        "image": "https://cdn-icons-png.flaticon.com/512/597/597177.png"
+    },
+    {
+        "word": "أطلّ/يطلّ على",
+        "english": "to look onto",
+        "type": "verb",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/look"
+    },
+    {
+        "word": "تقليديّ",
+        "english": "traditional",
+        "type": "adjective",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/traditional"
+    },
+    {
+        "word": "تكوّن/يتكوّن",
+        "english": "to consist",
+        "type": "verb",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/structure"
+    },
+    {
+        "word": "ثلّاجة/ثلّاجات",
+        "english": "fridge",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/fridge"
+    },
+    {
+        "word": "حديث",
+        "english": "modern",
+        "type": "adjective",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/modern"
+    },
+    {
+        "word": "حديقة/حدائق",
+        "english": "garden",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/garden"
+    },
+    {
+        "word": "حمّام/حمّامات",
+        "english": "bathroom",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/bathroom"
+    },
+    {
+        "word": "خاصّ",
+        "english": "private",
+        "type": "adjective",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/private"
+    },
+    {
+        "word": "دار/ديار",
+        "english": "house",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/house"
+    },
+    {
+        "word": "ساكن/سكّان",
+        "english": "resident",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/resident"
+    },
+    {
+        "word": "سلّم/سلالم",
+        "english": "stairs",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/stairs"
+    },
+    {
+        "word": "شرفة/شرفات",
+        "english": "balcony",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/balcony"
+    },
+    {
+        "word": "صالة/صالات",
+        "english": "hall",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/hall"
+    },
+    {
+        "word": "طابق/طوابق",
+        "english": "floor (storey)",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/floor"
+    },
+    {
+        "word": "غرفة جلوس",
+        "english": "sitting room",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/living_room"
+    },
+    {
+        "word": "غرفة معيشة",
+        "english": "living room",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/living_room"
+    },
+    {
+        "word": "غرفة نوم",
+        "english": "bedroom",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/bedroom"
+    },
+    {
+        "word": "غرفة/غرف",
+        "english": "room",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/room"
+    },
+    {
+        "word": "فرن/أفران",
+        "english": "cooker/oven",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/oven"
+    },
+    {
+        "word": "للإيجار",
+        "english": "for rent",
+        "type": "phrase",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/for_rent"
+    },
+    {
+        "word": "مريح",
+        "english": "comfortable",
+        "type": "adjective",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/comfortable"
+    },
+    {
+        "word": "مزدحم",
+        "english": "crowded",
+        "type": "adjective",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/crowded"
+    },
+    {
+        "word": "مصعد/مصاعد",
+        "english": "elevator",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/elevator"
+    },
+    {
+        "word": "مطبخ/مطابخ",
+        "english": "kitchen",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/kitchen"
+    },
+    {
+        "word": "مناسب",
+        "english": "suitable",
+        "type": "adjective",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/suitable"
+    },
+    {
+        "word": "منزل/منازل",
+        "english": "home",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/home"
+    },
+    {
+        "word": "هادئ",
+        "english": "quiet",
+        "type": "adjective",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/quiet"
+    },
+    {
+        "word": "واسع",
+        "english": "spacious",
+        "type": "adjective",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/spacious"
+    },
+    {
+        "word": "يوجد/توجد",
+        "english": "can be found",
+        "type": "verb",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/found"
+    },
+    {
+        "word": "غرفة سفرة",
+        "english": "dining room",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/dining_room"
+    },
+    {
+        "word": "متاح",
+        "english": "available",
+        "type": "adjective",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/available"
+    },
+    {
+        "word": "تكوّن/يتكوّن من",
+        "english": "to consist (of)",
+        "type": "verb",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/structure"
+    },
+    {
+        "word": "الإنترنت",
+        "english": "the Internet",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/internet"
+    },
+    {
+        "word": "تكييف هواء",
+        "english": "air-conditioning",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/air_conditioning"
+    },
+    {
+        "word": "حمّام سباحة",
+        "english": "swimming pool",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/swimming_pool"
+    },
+    {
+        "word": "أطلّ/يطلّ على",
+        "english": "to look onto",
+        "type": "verb",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/look"
+    },
+    {
+        "word": "تقليديّ",
+        "english": "traditional",
+        "type": "adjective",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/traditional"
+    },
+    {
+        "word": "تكوّن/يتكوّن",
+        "english": "to consist",
+        "type": "verb",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/structure"
+    },
+    {
+        "word": "ثلّاجة/ثلّاجات",
+        "english": "fridge",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/fridge"
+    },
+    {
+        "word": "حديث",
+        "english": "modern",
+        "type": "adjective",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/modern"
+    },
+    {
+        "word": "حديقة/حدائق",
+        "english": "garden",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/garden"
+    },
+    {
+        "word": "حمّام/حمّامات",
+        "english": "bathroom",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/bathroom"
+    },
+    {
+        "word": "خاصّ",
+        "english": "private",
+        "type": "adjective",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/private"
+    },
+    {
+        "word": "دار/ديار",
+        "english": "house",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/house"
+    },
+    {
+        "word": "ساكن/سكّان",
+        "english": "resident",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/resident"
+    },
+    {
+        "word": "سلّم/سلالم",
+        "english": "stairs",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/stairs"
+    },
+    {
+        "word": "شرفة/شرفات",
+        "english": "balcony",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/balcony"
+    },
+    {
+        "word": "صالة/صالات",
+        "english": "hall",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/hall"
+    },
+    {
+        "word": "طابق/طوابق",
+        "english": "floor (storey)",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/floor"
+    },
+    {
+        "word": "غرفة جلوس",
+        "english": "sitting room",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/living_room"
+    },
+    {
+        "word": "غرفة معيشة",
+        "english": "living room",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/living_room"
+    },
+    {
+        "word": "غرفة نوم",
+        "english": "bedroom",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/bedroom"
+    },
+    {
+        "word": "غرفة/غرف",
+        "english": "room",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/room"
+    },
+    {
+        "word": "فرن/أفران",
+        "english": "cooker/oven",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/oven"
+    },
+    {
+        "word": "للإيجار",
+        "english": "for rent",
+        "type": "phrase",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/for_rent"
+    },
+    {
+        "word": "مريح",
+        "english": "comfortable",
+        "type": "adjective",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/comfortable"
+    },
+    {
+        "word": "مزدحم",
+        "english": "crowded",
+        "type": "adjective",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/crowded"
+    },
+    {
+        "word": "مصعد/مصاعد",
+        "english": "elevator",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/elevator"
+    },
+    {
+        "word": "مطبخ/مطابخ",
+        "english": "kitchen",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/kitchen"
+    },
+    {
+        "word": "مناسب",
+        "english": "suitable",
+        "type": "adjective",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/suitable"
+    },
+    {
+        "word": "منزل/منازل",
+        "english": "home",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/home"
+    },
+    {
+        "word": "هادئ",
+        "english": "quiet",
+        "type": "adjective",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/quiet"
+    },
+    {
+        "word": "واسع",
+        "english": "spacious",
+        "type": "adjective",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/spacious"
+    },
+    {
+        "word": "يوجد/توجد",
+        "english": "can be found",
+        "type": "verb",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/found"
+    },
+    {
+        "word": "غرفة سفرة",
+        "english": "dining room",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/dining_room"
+    },
+    {
+        "word": "متاح",
+        "english": "available",
+        "type": "adjective",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/available"
+    },
+    {
+        "word": "تكوّن/يتكوّن من",
+        "english": "to consist (of)",
+        "type": "verb",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/structure"
+    },
+    {
+        "word": "الإنترنت",
+        "english": "the Internet",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/internet"
+    },
+    {
+        "word": "تكييف هواء",
+        "english": "air-conditioning",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/air_conditioning"
+    },
+    {
+        "word": "حمّام سباحة",
+        "english": "swimming pool",
+        "type": "noun",
+        "unit": "Unit 2",
+        "image": "https://undraw.co/api/illustrations/swimming_pool"
+    },
+    {
+        "word": "أحبّ/يحبّ",
+        "english": "to like",
+        "type": "verb",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/like"
+    },
+    {
+        "word": "ترفيه",
+        "english": "leisure",
+        "type": "noun",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/leisure"
+    },
+    {
+        "word": "تصوير",
+        "english": "photography",
+        "type": "noun",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/photography"
+    },
+    {
+        "word": "تنس",
+        "english": "tennis",
+        "type": "noun",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/tennis"
+    },
+    {
+        "word": "درّب/يدرّب",
+        "english": "to coach",
+        "type": "verb",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/coach"
+    },
+    {
+        "word": "ركب/يركب",
+        "english": "to ride",
+        "type": "verb",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/ride"
+    },
+    {
+        "word": "ركوب الخيل",
+        "english": "horse riding",
+        "type": "noun",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/horse_riding"
+    },
+    {
+        "word": "سباحة",
+        "english": "swimming",
+        "type": "noun",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/swimming"
+    },
+    {
+        "word": "شاهد/يشاهد",
+        "english": "to view",
+        "type": "verb",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/view"
+    },
+    {
+        "word": "صوّر/يصوّر",
+        "english": "to photograph",
+        "type": "verb",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/photograph"
+    },
+    {
+        "word": "صيد السمك",
+        "english": "fishing",
+        "type": "noun",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/fishing"
+    },
+    {
+        "word": "فضّل/يفضّل",
+        "english": "to prefer",
+        "type": "verb",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/prefer"
+    },
+    {
+        "word": "فنّ/فنون",
+        "english": "art",
+        "type": "noun",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/art"
+    },
+    {
+        "word": "كرة السلّة",
+        "english": "basketball",
+        "type": "noun",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/basketball"
+    },
+    {
+        "word": "كرة القدم",
+        "english": "football (soccer)",
+        "type": "noun",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/football"
+    },
+    {
+        "word": "كره/يكره",
+        "english": "to hate",
+        "type": "verb",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/hate"
+    },
+    {
+        "word": "لاعب/لاعبون",
+        "english": "player",
+        "type": "noun",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/player"
+    },
+    {
+        "word": "مثير",
+        "english": "exciting",
+        "type": "adjective",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/exciting"
+    },
+    {
+        "word": "مشغول",
+        "english": "busy",
+        "type": "adjective",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/busy"
+    },
+    {
+        "word": "معرض/معارض",
+        "english": "exhibition",
+        "type": "noun",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/exhibition"
+    },
+    {
+        "word": "مفضّل",
+        "english": "favourite",
+        "type": "adjective",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/favourite"
+    },
+    {
+        "word": "مفيد",
+        "english": "beneficial",
+        "type": "adjective",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/beneficial"
+    },
+    {
+        "word": "مكتبة/مكتبات",
+        "english": "library",
+        "type": "noun",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/library"
+    },
+    {
+        "word": "ممتاز",
+        "english": "excellent",
+        "type": "adjective",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/excellent"
+    },
+    {
+        "word": "ممتع",
+        "english": "enjoyable",
+        "type": "adjective",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/enjoyable"
+    },
+    {
+        "word": "مملّ",
+        "english": "boring",
+        "type": "adjective",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/boring"
+    },
+    {
+        "word": "نادٍ/نوادٍ",
+        "english": "club",
+        "type": "noun",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/club"
+    },
+    {
+        "word": "نشاط/أنشطة",
+        "english": "activity",
+        "type": "noun",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/activity"
+    },
+    {
+        "word": "هواية/هوايات",
+        "english": "hobby",
+        "type": "noun",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/hobby"
+    },
+    {
+        "word": "وقت الفراغ",
+        "english": "free time",
+        "type": "noun",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/free_time"
+    },
+    {
+        "word": "تابع/يتابع",
+        "english": "to follow",
+        "type": "verb",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/follow"
+    },
+    {
+        "word": "العدو",
+        "english": "running",
+        "type": "noun",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/running"
+    },
+    {
+        "word": "فرديّ",
+        "english": "individual",
+        "type": "adjective",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/individual"
+    },
+    {
+        "word": "جماعيّ",
+        "english": "collective",
+        "type": "adjective",
+        "unit": "Unit 4",
+        "image": "https://undraw.co/api/illustrations/collective"
+    },
+    {
+        "word": "إشارة المرور",
+        "english": "traffic lights",
+        "type": "noun",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/traffic_lights"
+    },
+    {
+        "word": "اشترى/يشتري",
+        "english": "to buy",
+        "type": "verb",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/buy"
+    },
+    {
+        "word": "بطاقة بريديّة",
+        "english": "postcard",
+        "type": "noun",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/postcard"
+    },
+    {
+        "word": "توجّه/يتوجّه نحو",
+        "english": "to head towards",
+        "type": "verb",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/head_towards"
+    },
+    {
+        "word": "حجّ",
+        "english": "pilgrimage",
+        "type": "noun",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/pilgrimage"
+    },
+    {
+        "word": "خائف",
+        "english": "afraid",
+        "type": "adjective",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/afraid"
+    },
+    {
+        "word": "دلّ/يدلّ",
+        "english": "to show (the way)",
+        "type": "verb",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/show_way"
+    },
+    {
+        "word": "رحلة/رحلات",
+        "english": "journey",
+        "type": "noun",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/journey"
+    },
+    {
+        "word": "سعيد",
+        "english": "happy",
+        "type": "adjective",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/happy"
+    },
+    {
+        "word": "سفر",
+        "english": "travel",
+        "type": "noun",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/travel"
+    },
+    {
+        "word": "سياحة",
+        "english": "tourism",
+        "type": "noun",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/tourism"
+    },
+    {
+        "word": "شعر/يشعر",
+        "english": "to feel",
+        "type": "verb",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/feel"
+    },
+    {
+        "word": "طريق/طرق",
+        "english": "way, road",
+        "type": "noun",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/road"
+    },
+    {
+        "word": "عجيب",
+        "english": "wonderful",
+        "type": "adjective",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/wonderful"
+    },
+    {
+        "word": "على طول",
+        "english": "straight on",
+        "type": "adverb",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/straight_on"
+    },
+    {
+        "word": "غادر/يغادر",
+        "english": "to depart",
+        "type": "verb",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/depart"
+    },
+    {
+        "word": "قلعة/قلاع",
+        "english": "fort, castle",
+        "type": "noun",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/castle"
+    },
+    {
+        "word": "ماشياً",
+        "english": "on foot",
+        "type": "adverb",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/on_foot"
+    },
+    {
+        "word": "محطّة/محطّات",
+        "english": "station",
+        "type": "noun",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/station"
+    },
+    {
+        "word": "مركز التسوّق",
+        "english": "shopping centre",
+        "type": "noun",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/shopping_centre"
+    },
+    {
+        "word": "مركز الرياضة",
+        "english": "sports centre",
+        "type": "noun",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/sports_centre"
+    },
+    {
+        "word": "مركز الشرطة",
+        "english": "police station",
+        "type": "noun",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/police_station"
+    },
+    {
+        "word": "مركز/مراكز",
+        "english": "centre",
+        "type": "noun",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/centre"
+    },
+    {
+        "word": "مكتب البريد",
+        "english": "post office",
+        "type": "noun",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/post_office"
+    },
+    {
+        "word": "مكتب/مكاتب",
+        "english": "office",
+        "type": "noun",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/office"
+    },
+    {
+        "word": "ميدان/ميادين",
+        "english": "square (town)",
+        "type": "noun",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/town_square"
+    },
+    {
+        "word": "ناصية/نواصٍ",
+        "english": "corner",
+        "type": "noun",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/corner"
+    },
+    {
+        "word": "نقل",
+        "english": "transportation",
+        "type": "noun",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/transportation"
+    },
+    {
+        "word": "واحة/واحات",
+        "english": "oasis",
+        "type": "noun",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/oasis"
+    },
+    {
+        "word": "نخلة/نخيل",
+        "english": "palm tree",
+        "type": "noun",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/palm_tree"
+    },
+    {
+        "word": "استفسر/يستفسر",
+        "english": "to enquire",
+        "type": "verb",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/enquire"
+    },
+    {
+        "word": "مسروقات",
+        "english": "stolen items",
+        "type": "noun",
+        "unit": "Unit 5",
+        "image": "https://undraw.co/api/illustrations/stolen_items"
+    },
+    {
+        "word": "أسلوب/أساليب",
+        "english": "method",
+        "type": "noun",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/method"
+    },
+    {
+        "word": "أفطر/يفطر",
+        "english": "to eat breakfast",
+        "type": "verb",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/breakfast"
+    },
+    {
+        "word": "استهلك/يستهلك",
+        "english": "to consume",
+        "type": "verb",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/consume"
+    },
+    {
+        "word": "بقّالة/بقّالات",
+        "english": "grocery",
+        "type": "noun",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/grocery"
+    },
+    {
+        "word": "تمر",
+        "english": "dates",
+        "type": "noun",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/dates"
+    },
+    {
+        "word": "تناول/يتناول",
+        "english": "to eat, partake",
+        "type": "verb",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/eat"
+    },
+    {
+        "word": "ثوم",
+        "english": "garlic",
+        "type": "noun",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/garlic"
+    },
+    {
+        "word": "حلويات",
+        "english": "sweets, desserts",
+        "type": "noun",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/dessert"
+    },
+    {
+        "word": "خضريّ/خضريّون",
+        "english": "greengrocer",
+        "type": "noun",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/greengrocer"
+    },
+    {
+        "word": "سعر/أسعار",
+        "english": "price",
+        "type": "noun",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/price"
+    },
+    {
+        "word": "سلاطة",
+        "english": "salad",
+        "type": "noun",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/salad"
+    },
+    {
+        "word": "صوم",
+        "english": "fast, fasting",
+        "type": "noun",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/fasting"
+    },
+    {
+        "word": "طعام/أطعمة",
+        "english": "food",
+        "type": "noun",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/food"
+    },
+    {
+        "word": "غذاء/أغذية",
+        "english": "food (stuff)",
+        "type": "noun",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/food_stuff"
+    },
+    {
+        "word": "في الفرن",
+        "english": "baked",
+        "type": "adjective",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/baked"
+    },
+    {
+        "word": "كمّية/كمّيات",
+        "english": "quantity",
+        "type": "noun",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/quantity"
+    },
+    {
+        "word": "كوب/أكواب",
+        "english": "glass, cup (for measuring)",
+        "type": "noun",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/glass"
+    },
+    {
+        "word": "محشي",
+        "english": "stuffed",
+        "type": "adjective",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/stuffed"
+    },
+    {
+        "word": "محلّ/محلّات",
+        "english": "shop (store)",
+        "type": "noun",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/shop"
+    },
+    {
+        "word": "مسلوق",
+        "english": "boiled",
+        "type": "adjective",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/boiled"
+    },
+    {
+        "word": "مشوي",
+        "english": "grilled",
+        "type": "adjective",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/grilled"
+    },
+    {
+        "word": "مفروم",
+        "english": "minced",
+        "type": "adjective",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/minced"
+    },
+    {
+        "word": "مقلي",
+        "english": "fried",
+        "type": "adjective",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/fried"
+    },
+    {
+        "word": "ملعقة/ملاعق",
+        "english": "spoon",
+        "type": "noun",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/spoon"
+    },
+    {
+        "word": "نعناع",
+        "english": "mint",
+        "type": "noun",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/mint"
+    },
+    {
+        "word": "وجبة/وجبات",
+        "english": "meal",
+        "type": "noun",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/meal"
+    },
+    {
+        "word": "خالٍ من",
+        "english": "free from",
+        "type": "adjective",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/free_from"
+    },
+    {
+        "word": "نباتيّ",
+        "english": "vegetarian",
+        "type": "adjective",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/vegetarian"
+    },
+    {
+        "word": "حساسيّة/حساسيّات",
+        "english": "allergy",
+        "type": "noun",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/allergy"
+    },
+    {
+        "word": "مكسّرات",
+        "english": "nuts",
+        "type": "noun",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/nuts"
+    },
+    {
+        "word": "منتجات",
+        "english": "products",
+        "type": "noun",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/products"
+    },
+    {
+        "word": "تطبيق/تطبيقات",
+        "english": "app",
+        "type": "noun",
+        "unit": "Unit 6",
+        "image": "https://undraw.co/api/illustrations/app"
+    },
+    {
+        "word": "أنيق",
+        "english": "elegant",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "إمرأة/نساء",
+        "english": "woman",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "بدلة/بدل",
+        "english": "suit",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "بنطلون/بنطلونات، سروال/سراويل",
+        "english": "trousers",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "جرّب/يجرّب",
+        "english": "to try on, test",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "جورب/جوارب",
+        "english": "sock",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "جيب/جيوب",
+        "english": "pocket",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "جيبة/جيبات، تنّورة/تنّورات",
+        "english": "skirt",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "حذاء/أحذية",
+        "english": "shoe",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "حزام/أحزمة",
+        "english": "belt",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "داكن",
+        "english": "dark (colour)",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "ذهبيّ",
+        "english": "gold (adj)",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "رماديّ",
+        "english": "grey",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "زاهٍ",
+        "english": "bright (colour)",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "سترة/ستر",
+        "english": "jacket",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "صمّم/يصمّم",
+        "english": "to design",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "صندل/صنادل",
+        "english": "sandals",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "صوف",
+        "english": "wool",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "فاتح",
+        "english": "light (colour)",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "فستان/فساتين",
+        "english": "dress",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "فضّيّ",
+        "english": "silver (adj)",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "قميص/قمصان",
+        "english": "shirt",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "كمّ/أكمام",
+        "english": "sleeve",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "مشغول باليد",
+        "english": "handmade",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "معرض الأزياء",
+        "english": "clothes show",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "معطف/معاطف",
+        "english": "coat",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "مقاس/مقاسات",
+        "english": "size",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "ناس",
+        "english": "people",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "نظّارة/نظّارات",
+        "english": "glasses",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "ورديّ",
+        "english": "pink",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "حجاب/أحجبة",
+        "english": "hijab",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "محتشم",
+        "english": "modest",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "محايد",
+        "english": "neutral",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "فضفاض",
+        "english": "flowing",
+        "unit": "Unit 7"
+    },
+    {
+        "word": "أجاد/يجيد",
+        "english": "to be good at",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "أعطى/يعطي",
+        "english": "to give",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "إيجابيّ",
+        "english": "positive",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "ابتدائيّ",
+        "english": "primary (school)",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "التجارة",
+        "english": "business studies",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "الحقوق",
+        "english": "law (study)",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "الطبّ",
+        "english": "medicine (study)",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "امتحان/امتحانات",
+        "english": "exam",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "تدريس",
+        "english": "teaching",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "تعليم",
+        "english": "education",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "تعليمات",
+        "english": "instructions",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "تعلّم/يتعلّم",
+        "english": "to learn",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "ثانويّ",
+        "english": "secondary (school)",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "جملة/جمل",
+        "english": "sentence",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "دراسة",
+        "english": "studying",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "دورة/دورات",
+        "english": "course",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "سؤال/أسئلة",
+        "english": "question",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "سجّل/يسجّل",
+        "english": "to enrol",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "سلبيّ",
+        "english": "negative",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "شرح/يشرح",
+        "english": "to explain",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "صفّ/صفوف",
+        "english": "class, grade",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "علم/علوم",
+        "english": "science",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "علّم/يعلّم",
+        "english": "to instruct",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "مادّة/موادّ",
+        "english": "subject",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "متفوّق",
+        "english": "excelling",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "معلّم/معلّمون",
+        "english": "instructor",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "معنى/معانٍ",
+        "english": "meaning",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "ممنوع",
+        "english": "forbidden",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "نصّ/نصوص",
+        "english": "text",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "دراسات الحاسوب",
+        "english": "computer studies",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "لغة/لغات",
+        "english": "language",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "مؤسّسة/مؤسّسات",
+        "english": "institution",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "إجباريّ",
+        "english": "compulsory",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "اختياريّ",
+        "english": "optional",
+        "unit": "Unit 8"
+    },
+    {
+        "word": "أخبار",
+        "english": "news",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "احتفل/يحتفل",
+        "english": "to celebrate",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "السياسة",
+        "english": "politics",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "المال",
+        "english": "finance",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "المجتمع",
+        "english": "society",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "بثّ",
+        "english": "transmission",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "تحليل",
+        "english": "analysis",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "تسويق",
+        "english": "marketing",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "حيّ",
+        "english": "live",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "دوليّ",
+        "english": "international",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "شجّع/يشجّع",
+        "english": "to encourage",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "شعبيّ",
+        "english": "popular",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "فائدة/فوائد",
+        "english": "interest, benefit",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "قارن/يقارن",
+        "english": "to compare",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "قانون/قوانين",
+        "english": "law, statute",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "قناة/قنوات",
+        "english": "channel",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "محلّيّ",
+        "english": "local",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "مدوّنة/مدوّنات",
+        "english": "blog",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "مذيع/مذيعون",
+        "english": "broadcaster",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "مستمع/مستمعون",
+        "english": "listener",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "مسجّل",
+        "english": "recorded",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "مشاهد/مشاهدون",
+        "english": "viewer",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "مصدر/مصادر",
+        "english": "source",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "منتدىً/منتديات",
+        "english": "forum",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "موضوع/مواضيع",
+        "english": "topic",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "نجاح/نجاحات",
+        "english": "success",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "وسائل الإعلام",
+        "english": "media",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "موقع/مواقع",
+        "english": "site, website",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "تغريدة/تغريدات",
+        "english": "tweet",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "حاسوب/حواسيب",
+        "english": "computer",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "تحميل",
+        "english": "download",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "رقميّ",
+        "english": "digital",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "مطوّر/مطوّرون",
+        "english": "developer",
+        "unit": "Unit 9"
+    },
+    {
+        "word": "أدار/يدير",
+        "english": "to operate",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "أوقف/يوقف",
+        "english": "to prevent",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "إعادة تدوير",
+        "english": "recycling",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "استخرج/يستخرج",
+        "english": "to extract",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "اقتصد/يقتصد في",
+        "english": "to conserve",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "الخريف",
+        "english": "autumn",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "الربيع",
+        "english": "spring",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "الشتاء",
+        "english": "winter",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "الصيف",
+        "english": "summer",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "النشرة الجوّيّة",
+        "english": "weather forecast",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "بيئة/بيئات",
+        "english": "environment",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "تراوح/يتراوح",
+        "english": "to vary",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "تغيير المناخ",
+        "english": "climate change",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "تلوّث",
+        "english": "pollution",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "ثلج/ثلوج",
+        "english": "snow",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "جافّ",
+        "english": "dry",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "جوّ/أجواء",
+        "english": "atmosphere, weather",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "ريح/رياح",
+        "english": "wind",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "سحابة/سحب",
+        "english": "cloud",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "صديق للبيئة",
+        "english": "environmentally friendly",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "صناعيّ",
+        "english": "manmade",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "عاصفة/عواصف",
+        "english": "storm",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "عبّأ/يعبّئ",
+        "english": "to package",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "عضويّ",
+        "english": "organic",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "مثلج",
+        "english": "snowy",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "مشروع/مشروعات",
+        "english": "project",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "مشمس",
+        "english": "sunny",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "مطر/أمطار",
+        "english": "rain",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "ممطر",
+        "english": "rainy",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "مناخ/مناخات",
+        "english": "climate",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "تحدٍّ/تحدّيات",
+        "english": "challenge",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "محافظة",
+        "english": "conservation",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "مرجان",
+        "english": "coral",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "مورد/موارد",
+        "english": "resources",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "مستدام",
+        "english": "sustainable",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "استهلاك",
+        "english": "consumption",
+        "unit": "Unit 10"
+    },
+    {
+        "word": "أذن/آذان",
+        "english": "ear",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "أقلع/يقلع",
+        "english": "to give up",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "ألم/آلام",
+        "english": "pain",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "أنف/أنوف",
+        "english": "nose",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "إصبع/أصابع",
+        "english": "finger",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "بطن/بطون، معدة/معد",
+        "english": "stomach",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "تدخين",
+        "english": "smoking",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "جسم/أجسام",
+        "english": "body",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "حبّة/حبوب",
+        "english": "pill",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "دم",
+        "english": "blood",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "دهنيّ",
+        "english": "fatty",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "دواء/أدوية",
+        "english": "medicine",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "ذراع/أذرع",
+        "english": "arm",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "رأس/رؤوس",
+        "english": "head",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "رجل/أرجل، ساق/سيقان",
+        "english": "leg",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "زائد",
+        "english": "excessive",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "سبّب/يسبّب",
+        "english": "to cause",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "سعادة",
+        "english": "happiness",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "سنّ/أسنان",
+        "english": "teeth",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "صداع",
+        "english": "headache",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "صدر/صدور",
+        "english": "chest",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "ضرّ/يضرّ",
+        "english": "to damage",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "عين/عيون",
+        "english": "eye",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "فم/أفواه",
+        "english": "mouth",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "قدم/أقدام",
+        "english": "foot",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "مرض/أمراض",
+        "english": "illness",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "مصاب",
+        "english": "suffering",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "وجه/وجوه",
+        "english": "face",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "يد/أيادٍ",
+        "english": "hand",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "ظهر/ظهور",
+        "english": "back",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "كتف/أكتاف",
+        "english": "shoulder",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "حلق/حلوق",
+        "english": "throat",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "ملحوظ",
+        "english": "noticeable",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "شاسع",
+        "english": "immense",
+        "unit": "Unit 11"
+    },
+    {
+        "word": "أغاني الشباب",
+        "english": "pop songs",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "أغنية/أغانٍ",
+        "english": "song",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "الخيال العلميّ",
+        "english": "science fiction",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "بطل/أبطال",
+        "english": "hero",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "تأثير/تأثيرات",
+        "english": "effect",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "تاريخيّ",
+        "english": "historical",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "تسجيليّ",
+        "english": "documentary",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "حدث/أحداث",
+        "english": "event",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "حرب/حروب",
+        "english": "war",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "دار/يدور حول",
+        "english": "to concern, to be about",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "راقص/راقصون",
+        "english": "dancer",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "رعب",
+        "english": "horror",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "رقص",
+        "english": "dance",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "رواية/روايات",
+        "english": "novel",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "شاعر/شعراء",
+        "english": "poet",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "شعر/أشعار",
+        "english": "poetry",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "غراميّ",
+        "english": "romantic",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "قرن/قرون",
+        "english": "century",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "مؤثّر",
+        "english": "moving",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "مؤلّف/مؤلّفون",
+        "english": "writer, composer",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "مجموعة/مجموعات",
+        "english": "group",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "مجهول",
+        "english": "unknown",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "مخرج/مخرجون",
+        "english": "director",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "مسرحيّة/مسرحيّات",
+        "english": "play",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "من بطولة",
+        "english": "starring",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "من تأليف",
+        "english": "written by",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "موسيقيّ/موسيقيّون",
+        "english": "musician",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "نقد",
+        "english": "criticism, review",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "هزليّ",
+        "english": "comic",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "عود/أعواد",
+        "english": "oud",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "آلة/آلات",
+        "english": "instrument",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "عزف/يعزف",
+        "english": "to play (an instrument)",
+        "unit": "Unit 12"
+    },
+    {
+        "word": "شعبيّ",
+        "english": "folk, popular",
+        "unit": "Unit 12"
+    }
 ]
