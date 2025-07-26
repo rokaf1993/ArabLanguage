@@ -1,0 +1,247 @@
+[
+  {
+    "word": "أصلاً",
+    "english": "originally",
+    "type": "adverb",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/1256/1256650.png"
+  },
+  {
+    "word": "أقام/يقيم",
+    "english": "to live/to reside (in a general area)",
+    "type": "verb",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/1946/1946436.png"
+  },
+  {
+    "word": "انتقل/ينتقل",
+    "english": "to move/to relocate",
+    "type": "verb",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/684/684908.png"
+  },
+  {
+    "word": "جدّ/أجداد",
+    "english": "grandfather",
+    "type": "noun",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/2991/2991146.png"
+  },
+  {
+    "word": "جدّة/جدّات",
+    "english": "grandmother",
+    "type": "noun",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/2991/2991143.png"
+  },
+  {
+    "word": "حفيد/أحفاد",
+    "english": "grandson",
+    "type": "noun",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/2922/2922561.png"
+  },
+  {
+    "word": "حفيدة/حفيدات",
+    "english": "granddaughter",
+    "type": "noun",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/2922/2922562.png"
+  },
+  {
+    "word": "حكيم",
+    "english": "wise",
+    "type": "adjective",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/1995/1995570.png"
+  },
+  {
+    "word": "خال/أخوال",
+    "english": "maternal uncle",
+    "type": "noun",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/2922/2922567.png"
+  },
+  {
+    "word": "خالة/خالات",
+    "english": "maternal aunt",
+    "type": "noun",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/2922/2922568.png"
+  },
+  {
+    "word": "ذكيّ",
+    "english": "intelligent",
+    "type": "adjective",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/2922/2922560.png"
+  },
+  {
+    "word": "رشيق",
+    "english": "graceful",
+    "type": "adjective",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/616/616408.png"
+  },
+  {
+    "word": "سكن/يسكن",
+    "english": "to live/to reside (in a specific place)",
+    "type": "verb",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/1946/1946436.png"
+  },
+  {
+    "word": "شخص/أشخاص",
+    "english": "person",
+    "type": "noun",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/1077/1077115.png"
+  },
+  {
+    "word": "شقّة/شقق",
+    "english": "apartment",
+    "type": "noun",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/1685/1685924.png"
+  },
+  {
+    "word": "شهير",
+    "english": "famous",
+    "type": "adjective",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/1087/1087514.png"
+  },
+  {
+    "word": "عائلة/عائلات",
+    "english": "family",
+    "type": "noun",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/1077/1077063.png"
+  },
+  {
+    "word": "عمّ/أعمام",
+    "english": "paternal uncle",
+    "type": "noun",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/2922/2922570.png"
+  },
+  {
+    "word": "عنوان/عناوين",
+    "english": "address",
+    "type": "noun",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/684/684908.png"
+  },
+  {
+    "word": "عنيد",
+    "english": "stubborn",
+    "type": "adjective",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/2922/2922558.png"
+  },
+  {
+    "word": "قرية/قرى",
+    "english": "village",
+    "type": "noun",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/3039/3039433.png"
+  },
+  {
+    "word": "كريم",
+    "english": "generous",
+    "type": "adjective",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/2190/2190586.png"
+  },
+  {
+    "word": "كسول",
+    "english": "lazy",
+    "type": "adjective",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/1995/1995566.png"
+  },
+  {
+    "word": "مات/يموت",
+    "english": "to die",
+    "type": "verb",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/1237/1237949.png"
+  },
+  {
+    "word": "محبوب",
+    "english": "popular",
+    "type": "adjective",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/616/616408.png"
+  },
+  {
+    "word": "موهوب",
+    "english": "talented",
+    "type": "adjective",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/616/616408.png"
+  },
+  {
+    "word": "نشيط",
+    "english": "active",
+    "type": "adjective",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/2922/2922559.png"
+  },
+  {
+    "word": "والدان",
+    "english": "parents",
+    "type": "noun",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/2922/2922563.png"
+  },
+  {
+    "word": "وُلِدَ",
+    "english": "was born",
+    "type": "verb",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/2917/2917998.png"
+  },
+  {
+    "word": "هاتف/هواتف",
+    "english": "telephone",
+    "type": "noun",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/597/597177.png"
+  },
+  {
+    "word": "رقم/أرقام",
+    "english": "number",
+    "type": "noun",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/2921/2921822.png"
+  },
+  {
+    "word": "رسالة/رسائل",
+    "english": "message",
+    "type": "noun",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/561/561127.png"
+  },
+  {
+    "word": "أديب/أدباء",
+    "english": "literary figure",
+    "type": "noun",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/2948/2948407.png"
+  },
+  {
+    "word": "موظّف/موظّفون",
+    "english": "employee",
+    "type": "noun",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/2922/2922539.png"
+  },
+  {
+    "word": "هاتف محمول",
+    "english": "mobile telephone",
+    "type": "noun",
+    "unit": "Unit 1",
+    "image": "https://cdn-icons-png.flaticon.com/512/597/597177.png"
+  }
+]
