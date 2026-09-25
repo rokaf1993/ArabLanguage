@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Halaqa — Teacher Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<style>
+  :root {
+    --gold: #C9A227; --ink: #161311; --cream: #FBF8F1; --border: #e6ddc8;
+    --green-bg: #E8F5E9; --green-text: #1B5E20;
+    --amber-bg: #FFF8E1; --amber-text: #8D6E20;
+    --red-bg: #FFEBEE; --red-text: #B71C1C;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+    background: var(--cream); color: var(--ink);
+  }
+  #login-screen {
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    background: var(--ink);
+  }
+  .login-card {
+    background: var(--cream); border-radius: 16px; padding: 48px; width: 360px;
+  }
+  .login-card h1 { font-size: 24px; margin: 0 0 8px; }
+  .login-card p { color: #9c9382; font-size: 14px; margin: 0 0 28px; }
+  input {
+    width: 100%; padding: 12px 14px; margin-bottom: 12px; border-radius: 8px;
+    border: 1px solid var(--border); font-size: 15px; background: #fff;
+  }
+  button {
+    width: 100%; padding: 13px; border-radius: 8px; border: none;
+    background: var(--gold); color: #161311; font-size: 15px; font-weight: 600;
+    cursor: pointer;
+  }
+  button:disabled { opacity: 0.6; cursor: default; }
+  #error-text { color: #B71C1C; font-size: 13px; margin: 4px 0 12px; min-height: 16px; }
+  #dashboard { display: none; max-width: 1100px; margin: 0 auto; padding: 32px 24px 80px; }
+  .top-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; }
+  .top-row h1 { font-size: 20px; margin: 0; }
+  #logout-btn { width: auto; padding: 8px 16px; background: transparent; border: 1px solid var(--border); color: #4a4438; font-weight: 500; }
+  select {
+    padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border); font-size: 15px;
+    background: #fff; margin-bottom: 24px; width: 100%;
+  }
+  .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 28px; }
+  .stat-card { background: #fff; border-radius: 12px; padding: 18px; border: 1px solid var(--border); }
+  .stat-card p:first-child { font-size: 13px; color: #9c9382; margin: 0 0 4px; }
+  .stat-card p:last-child { font-size: 26px; font-weight: 600; margin: 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 28px; background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); }
+  th { text-align: left; padding: 12px 14px; color: #9c9382; font-size: 12px; font-weight: 600; border-bottom: 1px solid var(--border); }
+  td { padding: 12px 14px; border-bottom: 1px solid var(--border); }
+  tr:last-child td { border-bottom: none; }
+  .pill { border-radius: 6px; padding: 3px 10px; font-weight: 600; }
+  .pill-green { background: var(--green-bg); color: var(--green-text); }
+  .pill-amber { background: var(--amber-bg); color: var(--amber-text); }
+  .pill-red { background: var(--red-bg); color: var(--red-text); }
+  .panel { background: #fff; border-radius: 12px; padding: 20px; border: 1px solid var(--border); margin-bottom: 20px; }
+  .panel h3 { font-size: 14px; color: #9c9382; margin: 0 0 12px; font-weight: 600; }
+  .missed-tag { display: inline-block; background: var(--red-bg); color: var(--red-text); border-radius: 6px; padding: 4px 10px; font-size: 13px; margin: 0 6px 6px 0; }
+  .note-card { background: #F5F5F5; border-radius: 8px; padding: 10px 12px; margin-bottom: 8px; }
+  .note-author { font-size: 12px; font-weight: 700; color: #555; margin-bottom: 3px; }
+  .empty-text { color: #9c9382; font-size: 14px; text-align: center; padding: 40px 0; }
+  .loading { text-align: center; padding: 40px; color: #9c9382; }
+</style>
+</head>
+<body>
+
+<div id="login-screen">
+  <div class="login-card">
+    <h1>Halaqa — Teacher Dashboard</h1>
+    <p>Log in with the same account you use in the app.</p>
+    <input id="login-email" type="email" placeholder="Email" autocomplete="username">
+    <input id="login-password" type="password" placeholder="Password" autocomplete="current-password">
+    <p id="error-text"></p>
+    <button id="login-btn">Log in</button>
+  </div>
+</div>
+
+<div id="dashboard">
+  <div class="top-row">
+    <h1 id="group-title">Halaqa — Teacher Dashboard</h1>
+    <button id="logout-btn">Log out</button>
+  </div>
+  <select id="group-select"></select>
+  <div id="content"><p class="loading">Loading…</p></div>
+</div>
+
+<script>
+const SUPABASE_URL = 'https://xknbwtdxpmlqcictxojz.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_nGKkwbJEbpC-UtT0YEgzzw_PFDU3GJn';
+const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+const loginScreen = document.getElementById('login-screen');
+const dashboard = document.getElementById('dashboard');
+const errorText = document.getElementById('error-text');
+const groupSelect = document.getElementById('group-select');
+const content = document.getElementById('content');
+const groupTitle = document.getElementById('group-title');
+
+let myGroups = [];
+
+// ---------- Auth ----------
+document.getElementById('login-btn').onclick = async () => {
+  const email = document.getElementById('login-email').value.trim();
+  const password = document.getElementById('login-password').value;
+  errorText.textContent = '';
+  if (!email || !password) { errorText.textContent = 'Enter your email and password.'; return; }
+  const { error } = await supabase.auth.signInWithPassword({ email, password });
+  if (error) { errorText.textContent = error.message; return; }
+  await afterLogin();
+};
+
+document.getElementById('logout-btn').onclick = async () => {
+  await supabase.auth.signOut();
+  dashboard.style.display = 'none';
+  loginScreen.style.display = 'flex';
+};
+
+async function afterLogin() {
+  const { data: { session } } = await supabase.auth.getSession();
+  if (!session) return;
+  loginScreen.style.display = 'none';
+  dashboard.style.display = 'block';
+  await loadMyGroups(session.user.id);
+}
+
+// Restore session on page reload
+supabase.auth.getSession().then(({ data: { session } }) => {
+  if (session) afterLogin();
+});
+
+// ---------- Groups the logged-in teacher created ----------
+async function loadMyGroups(userId) {
+  const { data, error } = await supabase.from('groups').select('id, name, code').eq('created_by', userId);
+  if (error || !data || data.length === 0) {
+    content.innerHTML = '<p class="empty-text">You don\'t have any groups yet — create one from the app first (Halaqa button in the top bar).</p>';
+    groupSelect.style.display = 'none';
+    return;
+  }
+  myGroups = data;
+  groupSelect.style.display = 'block';
+  groupSelect.innerHTML = myGroups.map((g) => `<option value="${g.id}">${g.name}</option>`).join('');
+  groupSelect.onchange = () => loadGroup(groupSelect.value);
+  loadGroup(myGroups[0].id);
+}
+
+// ---------- Streak calc (same logic as the app) ----------
+function todayKey() { return new Date().toISOString().slice(0, 10); }
+function calcStreak(rows) {
+  const hitDates = new Set(rows.filter((r) => r.hit_goal).map((r) => r.date));
+  let streak = 0;
+  const cursor = new Date();
+  if (!hitDates.has(todayKey())) cursor.setDate(cursor.getDate() - 1);
+  while (hitDates.has(cursor.toISOString().slice(0, 10))) {
+    streak += 1;
+    cursor.setDate(cursor.getDate() - 1);
+  }
+  return streak;
+}
+function formatLastActive(iso) {
+  if (!iso) return 'never';
+  const mins = Math.floor((Date.now() - new Date(iso).getTime()) / 60000);
+  if (mins < 1) return 'just now';
+  if (mins < 60) return `${mins}m ago`;
+  const hours = Math.floor(mins / 60);
+  if (hours < 24) return `${hours}h ago`;
+  return `${Math.floor(hours / 24)}d ago`;
+}
+
+// ---------- Load one group's full data ----------
+async function loadGroup(groupId) {
+  const group = myGroups.find((g) => g.id === groupId);
+  groupTitle.textContent = `Halaqa — ${group.name}`;
+  content.innerHTML = '<p class="loading">Loading…</p>';
+
+  const { data: memberRows } = await supabase.from('group_members').select('user_id').eq('group_id', groupId);
+  const userIds = (memberRows || []).map((r) => r.user_id);
+  if (userIds.length === 0) {
+    content.innerHTML = '<p class="empty-text">No members in this group yet.</p>';
+    return;
+  }
+
+  const [{ data: profiles }, { data: masteryRows }, { data: goalRows }, { data: sessionRows }, { data: lessonRows }, { data: noteRows }] = await Promise.all([
+    supabase.from('profiles').select('id, username').in('id', userIds),
+    supabase.from('word_mastery_log').select('user_id, word, mastery, is_wrong').in('user_id', userIds),
+    supabase.from('daily_goal_log').select('user_id, date, hit_goal').in('user_id', userIds).gte('date', new Date(Date.now() - 60 * 86400000).toISOString().slice(0, 10)),
+    supabase.from('app_sessions').select('user_id, started_at, duration_seconds').in('user_id', userIds),
+    supabase.from('group_lessons').select('id, title, theme_key, custom_words').eq('group_id', groupId).order('created_at', { ascending: false }).limit(1),
+    supabase.from('group_notes').select('user_id, word, message, created_at').eq('group_id', groupId).order('created_at', { ascending: false }).limit(10),
+  ]);
+
+  // Per-member aggregates
+  const byUser = {};
+  (profiles || []).forEach((p) => { byUser[p.id] = { username: p.username, green: 0, amber: 0, red: 0, streak: 0, lastActive: null, totalSeconds: 0 }; });
+  (masteryRows || []).forEach((r) => {
+    const u = byUser[r.user_id]; if (!u) return;
+    if (r.is_wrong) u.red += 1;
+    else if (r.mastery >= 4) u.green += 1;
+    else u.amber += 1;
+  });
+  const goalsByUser = {};
+  (goalRows || []).forEach((r) => { (goalsByUser[r.user_id] = goalsByUser[r.user_id] || []).push(r); });
+  Object.keys(byUser).forEach((id) => { byUser[id].streak = calcStreak(goalsByUser[id] || []); });
+  (sessionRows || []).forEach((r) => {
+    const u = byUser[r.user_id]; if (!u) return;
+    u.totalSeconds += r.duration_seconds || 0;
+    if (!u.lastActive || r.started_at > u.lastActive) u.lastActive = r.started_at;
+  });
+
+  // Class-wide most-missed words
+  const missCounts = {};
+  (masteryRows || []).forEach((r) => { if (r.is_wrong) missCounts[r.word] = (missCounts[r.word] || 0) + 1; });
+  const topMissed = Object.entries(missCounts).sort((a, b) => b[1] - a[1]).slice(0, 8);
+
+  const students = Object.values(byUser);
+  const avgStreak = students.length ? (students.reduce((s, x) => s + x.streak, 0) / students.length).toFixed(1) : '0';
+  const totalRed = students.reduce((s, x) => s + x.red, 0);
+
+  const lesson = (lessonRows || [])[0];
+
+  content.innerHTML = `
+    <div class="stat-row">
+      <div class="stat-card"><p>Students</p><p>${students.length}</p></div>
+      <div class="stat-card"><p>Average streak</p><p>${avgStreak} days</p></div>
+      <div class="stat-card"><p>Words needing review</p><p>${totalRed}</p></div>
+    </div>
+    ${lesson ? `<div class="panel"><h3>Current lesson</h3><p style="margin:0; font-size:16px">📚 ${lesson.title || (lesson.theme_key ? 'Theme: ' + lesson.theme_key : (lesson.custom_words || []).length + ' custom words')}</p></div>` : ''}
+    <table>
+      <tr><th>Student</th><th>Known</th><th>Learning</th><th>Wrong</th><th>Streak</th><th>Last active</th></tr>
+      ${students.map((s) => `
+        <tr>
+          <td><strong>${s.username || 'Someone'}</strong></td>
+          <td><span class="pill pill-green">${s.green}</span></td>
+          <td><span class="pill pill-amber">${s.amber}</span></td>
+          <td><span class="pill pill-red">${s.red}</span></td>
+          <td>${s.streak}</td>
+          <td style="color:#9c9382">${formatLastActive(s.lastActive)}</td>
+        </tr>`).join('')}
+    </table>
+    <div class="panel">
+      <h3>Most missed words across the group</h3>
+      ${topMissed.length
+        ? topMissed.map(([word, count]) => `<span class="missed-tag">${word} (${count})</span>`).join('')
+        : '<p style="color:#9c9382; font-size:14px; margin:0">No wrong answers logged yet.</p>'}
+    </div>
+    <div class="panel">
+      <h3>Notes from the group</h3>
+      ${(noteRows || []).length
+        ? noteRows.map((n) => `<div class="note-card"><div class="note-author">${(byUser[n.user_id] || {}).username || 'Someone'}${n.word ? ' · ' + n.word : ''}</div>${n.message}</div>`).join('')
+        : '<p style="color:#9c9382; font-size:14px; margin:0">No notes yet.</p>'}
+    </div>
+  `;
+}
+</script>
+</body>
+</html>
