@@ -2902,5 +2902,1209 @@
     "english": "folk, popular",
     "unit": "Unit 12",
     "transliteration": "sha'bi"
+  },
+  {
+    "word": "توأم/توائم",
+    "english": "twin",
+    "type": "noun",
+    "unit": "Unit 1",
+    "transliteration": "taw'am/tawaa'im"
+  },
+  {
+    "word": "جار/جيران",
+    "english": "neighbour",
+    "type": "noun",
+    "unit": "Unit 1",
+    "transliteration": "jaar/jeeraan"
+  },
+  {
+    "word": "ضيف/ضيوف",
+    "english": "guest",
+    "type": "noun",
+    "unit": "Unit 1",
+    "transliteration": "dayf/duyoof"
+  },
+  {
+    "word": "عريس",
+    "english": "groom",
+    "type": "noun",
+    "unit": "Unit 1",
+    "transliteration": "'arees"
+  },
+  {
+    "word": "عروس",
+    "english": "bride",
+    "type": "noun",
+    "unit": "Unit 1",
+    "transliteration": "'aroos"
+  },
+  {
+    "word": "رضيع",
+    "english": "baby, infant",
+    "type": "noun",
+    "unit": "Unit 1",
+    "transliteration": "radee'"
+  },
+  {
+    "word": "عجوز",
+    "english": "old person",
+    "type": "noun",
+    "unit": "Unit 1",
+    "transliteration": "'ajooz"
+  },
+  {
+    "word": "تزوّج/يتزوّج",
+    "english": "to get married",
+    "type": "verb",
+    "unit": "Unit 1",
+    "transliteration": "tazawwaja/yatazawwaj"
+  },
+  {
+    "word": "تزوّج",
+    "english": "marriage, getting married",
+    "type": "noun",
+    "unit": "Unit 1",
+    "transliteration": "tazawwuj"
+  },
+  {
+    "word": "قريب/أقارب",
+    "english": "relative",
+    "type": "noun",
+    "unit": "Unit 1",
+    "transliteration": "qareeb/aqaarib"
+  },
+  {
+    "word": "شابّ/شباب",
+    "english": "young man",
+    "type": "noun",
+    "unit": "Unit 1",
+    "transliteration": "shaabb/shabaab"
+  },
+  {
+    "word": "أرضيّة",
+    "english": "floor",
+    "type": "noun",
+    "unit": "Unit 2",
+    "transliteration": "ardiyya"
+  },
+  {
+    "word": "جدار/جدران",
+    "english": "wall",
+    "type": "noun",
+    "unit": "Unit 2",
+    "transliteration": "jidaar/judraan"
+  },
+  {
+    "word": "خزانة",
+    "english": "wardrobe, cupboard",
+    "type": "noun",
+    "unit": "Unit 2",
+    "transliteration": "khizaana"
+  },
+  {
+    "word": "ستارة/ستائر",
+    "english": "curtain",
+    "type": "noun",
+    "unit": "Unit 2",
+    "transliteration": "sitaara/sataa'ir"
+  },
+  {
+    "word": "سجّاد",
+    "english": "carpet",
+    "type": "noun",
+    "unit": "Unit 2",
+    "transliteration": "sajjaad"
+  },
+  {
+    "word": "مصباح/مصابيح",
+    "english": "lamp",
+    "type": "noun",
+    "unit": "Unit 2",
+    "transliteration": "misbaah/masaabeeh"
+  },
+  {
+    "word": "إيجار",
+    "english": "rent",
+    "type": "noun",
+    "unit": "Unit 2",
+    "transliteration": "eejaar"
+  },
+  {
+    "word": "أريكة",
+    "english": "sofa, couch",
+    "type": "noun",
+    "unit": "Unit 2",
+    "transliteration": "areeka"
+  },
+  {
+    "word": "عقد/عقود",
+    "english": "contract",
+    "type": "noun",
+    "unit": "Unit 2",
+    "transliteration": "'aqd/'uqood"
+  },
+  {
+    "word": "زميل/زملاء",
+    "english": "colleague",
+    "type": "noun",
+    "unit": "Unit 3",
+    "transliteration": "zameel/zumalaa'"
+  },
+  {
+    "word": "استقال/يستقيل",
+    "english": "to resign",
+    "type": "verb",
+    "unit": "Unit 3",
+    "transliteration": "istaqaala/yastaqeel"
+  },
+  {
+    "word": "استقالة",
+    "english": "resignation",
+    "type": "noun",
+    "unit": "Unit 3",
+    "transliteration": "istiqaala"
+  },
+  {
+    "word": "وظّف/يوظّف",
+    "english": "to employ, to hire",
+    "type": "verb",
+    "unit": "Unit 3",
+    "transliteration": "wazzafa/yuwazzif"
+  },
+  {
+    "word": "توظيف",
+    "english": "employment, hiring",
+    "type": "noun",
+    "unit": "Unit 3",
+    "transliteration": "tawzeef"
+  },
+  {
+    "word": "ترقية",
+    "english": "promotion",
+    "type": "noun",
+    "unit": "Unit 3",
+    "transliteration": "tarqiya"
+  },
+  {
+    "word": "إجازة",
+    "english": "holiday, leave",
+    "type": "noun",
+    "unit": "Unit 3",
+    "transliteration": "ijaaza"
+  },
+  {
+    "word": "متقاعد",
+    "english": "retired",
+    "type": "adjective",
+    "unit": "Unit 3",
+    "transliteration": "mutaqaa'id"
+  },
+  {
+    "word": "مهندس",
+    "english": "engineer",
+    "type": "noun",
+    "unit": "Unit 3",
+    "transliteration": "muhandis"
+  },
+  {
+    "word": "محاسب",
+    "english": "accountant",
+    "type": "noun",
+    "unit": "Unit 3",
+    "transliteration": "muhaasib"
+  },
+  {
+    "word": "مهنة/مهن",
+    "english": "profession",
+    "type": "noun",
+    "unit": "Unit 3",
+    "transliteration": "mihna/mihan"
+  },
+  {
+    "word": "ركض/يركض",
+    "english": "to run",
+    "type": "verb",
+    "unit": "Unit 4",
+    "transliteration": "rakada/yarkud"
+  },
+  {
+    "word": "ركض",
+    "english": "running",
+    "type": "noun",
+    "unit": "Unit 4",
+    "transliteration": "rakd"
+  },
+  {
+    "word": "ملعب/ملاعب",
+    "english": "stadium, pitch",
+    "type": "noun",
+    "unit": "Unit 4",
+    "transliteration": "mal'ab/malaa'ib"
+  },
+  {
+    "word": "فريق/فرق",
+    "english": "team",
+    "type": "noun",
+    "unit": "Unit 4",
+    "transliteration": "fareeq/firaq"
+  },
+  {
+    "word": "مباراة",
+    "english": "match, game",
+    "type": "noun",
+    "unit": "Unit 4",
+    "transliteration": "mubaaraa"
+  },
+  {
+    "word": "هدف/أهداف",
+    "english": "goal",
+    "type": "noun",
+    "unit": "Unit 4",
+    "transliteration": "hadaf/ahdaaf"
+  },
+  {
+    "word": "فاز/يفوز",
+    "english": "to win",
+    "type": "verb",
+    "unit": "Unit 4",
+    "transliteration": "faaza/yafooz"
+  },
+  {
+    "word": "فوز",
+    "english": "win, victory",
+    "type": "noun",
+    "unit": "Unit 4",
+    "transliteration": "fawz"
+  },
+  {
+    "word": "خسر/يخسر",
+    "english": "to lose",
+    "type": "verb",
+    "unit": "Unit 4",
+    "transliteration": "khasira/yakhsar"
+  },
+  {
+    "word": "خسارة",
+    "english": "loss",
+    "type": "noun",
+    "unit": "Unit 4",
+    "transliteration": "khasaara"
+  },
+  {
+    "word": "درّاجة",
+    "english": "bicycle",
+    "type": "noun",
+    "unit": "Unit 4",
+    "transliteration": "darraaja"
+  },
+  {
+    "word": "صيد",
+    "english": "fishing, hunting",
+    "type": "noun",
+    "unit": "Unit 4",
+    "transliteration": "sayd"
+  },
+  {
+    "word": "تخييم",
+    "english": "camping",
+    "type": "noun",
+    "unit": "Unit 4",
+    "transliteration": "takhyeem"
+  },
+  {
+    "word": "رسم",
+    "english": "drawing",
+    "type": "noun",
+    "unit": "Unit 4",
+    "transliteration": "rasm"
+  },
+  {
+    "word": "طبخ",
+    "english": "cooking",
+    "type": "noun",
+    "unit": "Unit 4",
+    "transliteration": "tabkh"
+  },
+  {
+    "word": "تسلّق/يتسلّق",
+    "english": "to climb",
+    "type": "verb",
+    "unit": "Unit 4",
+    "transliteration": "tasallaqa/yatasallaq"
+  },
+  {
+    "word": "تسلّق",
+    "english": "climbing",
+    "type": "noun",
+    "unit": "Unit 4",
+    "transliteration": "tasalluq"
+  },
+  {
+    "word": "كأس",
+    "english": "cup, trophy",
+    "type": "noun",
+    "unit": "Unit 4",
+    "transliteration": "ka's"
+  },
+  {
+    "word": "جائزة/جوائز",
+    "english": "prize",
+    "type": "noun",
+    "unit": "Unit 4",
+    "transliteration": "jaa'iza/jawaa'iz"
+  },
+  {
+    "word": "بطولة",
+    "english": "championship, tournament",
+    "type": "noun",
+    "unit": "Unit 4",
+    "transliteration": "butoola"
+  },
+  {
+    "word": "لعب/يلعب",
+    "english": "to play",
+    "type": "verb",
+    "unit": "Unit 4",
+    "transliteration": "la'iba/yal'ab"
+  },
+  {
+    "word": "مشاهدة",
+    "english": "watching",
+    "type": "noun",
+    "unit": "Unit 4",
+    "transliteration": "mushaahada"
+  },
+  {
+    "word": "مطار",
+    "english": "airport",
+    "type": "noun",
+    "unit": "Unit 5",
+    "transliteration": "mataar"
+  },
+  {
+    "word": "جواز سفر",
+    "english": "passport",
+    "type": "noun",
+    "unit": "Unit 5",
+    "transliteration": "jawaaz safar"
+  },
+  {
+    "word": "حقيبة/حقائب",
+    "english": "bag, suitcase",
+    "type": "noun",
+    "unit": "Unit 5",
+    "transliteration": "haqeeba/haqaa'ib"
+  },
+  {
+    "word": "قطار",
+    "english": "train",
+    "type": "noun",
+    "unit": "Unit 5",
+    "transliteration": "qitaar"
+  },
+  {
+    "word": "حافلة",
+    "english": "bus",
+    "type": "noun",
+    "unit": "Unit 5",
+    "transliteration": "haafila"
+  },
+  {
+    "word": "فندق/فنادق",
+    "english": "hotel",
+    "type": "noun",
+    "unit": "Unit 5",
+    "transliteration": "funduq/fanaadiq"
+  },
+  {
+    "word": "حجز/يحجز",
+    "english": "to book, to reserve",
+    "type": "verb",
+    "unit": "Unit 5",
+    "transliteration": "hajaza/yahjiz"
+  },
+  {
+    "word": "حجز",
+    "english": "booking, reservation",
+    "type": "noun",
+    "unit": "Unit 5",
+    "transliteration": "hajz"
+  },
+  {
+    "word": "ميناء",
+    "english": "port, harbour",
+    "type": "noun",
+    "unit": "Unit 5",
+    "transliteration": "meenaa'"
+  },
+  {
+    "word": "خريطة",
+    "english": "map",
+    "type": "noun",
+    "unit": "Unit 5",
+    "transliteration": "khareeta"
+  },
+  {
+    "word": "سيّارة",
+    "english": "car",
+    "type": "noun",
+    "unit": "Unit 5",
+    "transliteration": "sayyaara"
+  },
+  {
+    "word": "زاوية",
+    "english": "corner",
+    "type": "noun",
+    "unit": "Unit 5",
+    "transliteration": "zaawiya"
+  },
+  {
+    "word": "جسر/جسور",
+    "english": "bridge",
+    "type": "noun",
+    "unit": "Unit 5",
+    "transliteration": "jisr/jusoor"
+  },
+  {
+    "word": "يمين",
+    "english": "right",
+    "type": "noun",
+    "unit": "Unit 5",
+    "transliteration": "yameen"
+  },
+  {
+    "word": "يسار",
+    "english": "left",
+    "type": "noun",
+    "unit": "Unit 5",
+    "transliteration": "yasaar"
+  },
+  {
+    "word": "مسافر",
+    "english": "traveller",
+    "type": "noun",
+    "unit": "Unit 5",
+    "transliteration": "musaafir"
+  },
+  {
+    "word": "سائق",
+    "english": "driver",
+    "type": "noun",
+    "unit": "Unit 5",
+    "transliteration": "saa'iq"
+  },
+  {
+    "word": "سافر/يسافر",
+    "english": "to travel",
+    "type": "verb",
+    "unit": "Unit 5",
+    "transliteration": "saafara/yusaafir"
+  },
+  {
+    "word": "وصل/يصل",
+    "english": "to arrive",
+    "type": "verb",
+    "unit": "Unit 5",
+    "transliteration": "wasala/yasil"
+  },
+  {
+    "word": "وصول",
+    "english": "arrival",
+    "type": "noun",
+    "unit": "Unit 5",
+    "transliteration": "wusool"
+  },
+  {
+    "word": "قريب من",
+    "english": "near (to)",
+    "type": "phrase",
+    "unit": "Unit 5",
+    "transliteration": "qareeb min"
+  },
+  {
+    "word": "بنّ",
+    "english": "coffee (beans)",
+    "type": "noun",
+    "unit": "Unit 6",
+    "transliteration": "bunn"
+  },
+  {
+    "word": "حليب",
+    "english": "milk",
+    "type": "noun",
+    "unit": "Unit 6",
+    "transliteration": "haleeb"
+  },
+  {
+    "word": "بيض",
+    "english": "eggs",
+    "type": "noun",
+    "unit": "Unit 6",
+    "transliteration": "bayd"
+  },
+  {
+    "word": "عسل",
+    "english": "honey",
+    "type": "noun",
+    "unit": "Unit 6",
+    "transliteration": "'asal"
+  },
+  {
+    "word": "ملح",
+    "english": "salt",
+    "type": "noun",
+    "unit": "Unit 6",
+    "transliteration": "milh"
+  },
+  {
+    "word": "سكّر",
+    "english": "sugar",
+    "type": "noun",
+    "unit": "Unit 6",
+    "transliteration": "sukkar"
+  },
+  {
+    "word": "فلفل",
+    "english": "pepper",
+    "type": "noun",
+    "unit": "Unit 6",
+    "transliteration": "filfil"
+  },
+  {
+    "word": "زيت",
+    "english": "oil",
+    "type": "noun",
+    "unit": "Unit 6",
+    "transliteration": "zayt"
+  },
+  {
+    "word": "تين",
+    "english": "figs",
+    "type": "noun",
+    "unit": "Unit 6",
+    "transliteration": "teen"
+  },
+  {
+    "word": "شوكة",
+    "english": "fork",
+    "type": "noun",
+    "unit": "Unit 6",
+    "transliteration": "shawka"
+  },
+  {
+    "word": "صحن/صحون",
+    "english": "plate",
+    "type": "noun",
+    "unit": "Unit 6",
+    "transliteration": "sahn/suhoon"
+  },
+  {
+    "word": "مائدة",
+    "english": "dining table",
+    "type": "noun",
+    "unit": "Unit 6",
+    "transliteration": "maa'ida"
+  },
+  {
+    "word": "حساء",
+    "english": "soup",
+    "type": "noun",
+    "unit": "Unit 6",
+    "transliteration": "hasaa'"
+  },
+  {
+    "word": "لذيذ",
+    "english": "delicious",
+    "type": "adjective",
+    "unit": "Unit 6",
+    "transliteration": "ladheedh"
+  },
+  {
+    "word": "جائع",
+    "english": "hungry",
+    "type": "adjective",
+    "unit": "Unit 6",
+    "transliteration": "jaa'i'"
+  },
+  {
+    "word": "عطشان",
+    "english": "thirsty",
+    "type": "adjective",
+    "unit": "Unit 6",
+    "transliteration": "'atshaan"
+  },
+  {
+    "word": "ثمن",
+    "english": "price",
+    "type": "noun",
+    "unit": "Unit 7",
+    "transliteration": "thaman"
+  },
+  {
+    "word": "رخيص",
+    "english": "cheap",
+    "type": "adjective",
+    "unit": "Unit 7",
+    "transliteration": "rakhees"
+  },
+  {
+    "word": "غالٍ",
+    "english": "expensive",
+    "type": "adjective",
+    "unit": "Unit 7",
+    "transliteration": "ghaalin"
+  },
+  {
+    "word": "تخفيض",
+    "english": "discount, sale",
+    "type": "noun",
+    "unit": "Unit 7",
+    "transliteration": "takhfeed"
+  },
+  {
+    "word": "سوق/أسواق",
+    "english": "market",
+    "type": "noun",
+    "unit": "Unit 7",
+    "transliteration": "sooq/aswaaq"
+  },
+  {
+    "word": "باع/يبيع",
+    "english": "to sell",
+    "type": "verb",
+    "unit": "Unit 7",
+    "transliteration": "baa'a/yabee'"
+  },
+  {
+    "word": "بيع",
+    "english": "selling, sale",
+    "type": "noun",
+    "unit": "Unit 7",
+    "transliteration": "bay'"
+  },
+  {
+    "word": "نقود",
+    "english": "money",
+    "type": "noun",
+    "unit": "Unit 7",
+    "transliteration": "nuqood"
+  },
+  {
+    "word": "بطاقة",
+    "english": "card",
+    "type": "noun",
+    "unit": "Unit 7",
+    "transliteration": "bitaaqa"
+  },
+  {
+    "word": "إيصال",
+    "english": "receipt",
+    "type": "noun",
+    "unit": "Unit 7",
+    "transliteration": "eesaal"
+  },
+  {
+    "word": "حقيبة يد",
+    "english": "handbag",
+    "type": "noun",
+    "unit": "Unit 7",
+    "transliteration": "haqeebat yad"
+  },
+  {
+    "word": "خاتم",
+    "english": "ring",
+    "type": "noun",
+    "unit": "Unit 7",
+    "transliteration": "khaatam"
+  },
+  {
+    "word": "جامعة",
+    "english": "university",
+    "type": "noun",
+    "unit": "Unit 8",
+    "transliteration": "jaami'a"
+  },
+  {
+    "word": "طالب/طلّاب",
+    "english": "student",
+    "type": "noun",
+    "unit": "Unit 8",
+    "transliteration": "taalib/tullaab"
+  },
+  {
+    "word": "كتاب/كتب",
+    "english": "book",
+    "type": "noun",
+    "unit": "Unit 8",
+    "transliteration": "kitaab/kutub"
+  },
+  {
+    "word": "دفتر/دفاتر",
+    "english": "notebook",
+    "type": "noun",
+    "unit": "Unit 8",
+    "transliteration": "daftar/dafaatir"
+  },
+  {
+    "word": "قلم/أقلام",
+    "english": "pen",
+    "type": "noun",
+    "unit": "Unit 8",
+    "transliteration": "qalam/aqlaam"
+  },
+  {
+    "word": "درس/دروس",
+    "english": "lesson",
+    "type": "noun",
+    "unit": "Unit 8",
+    "transliteration": "dars/duroos"
+  },
+  {
+    "word": "واجب",
+    "english": "homework",
+    "type": "noun",
+    "unit": "Unit 8",
+    "transliteration": "waajib"
+  },
+  {
+    "word": "جواب",
+    "english": "answer",
+    "type": "noun",
+    "unit": "Unit 8",
+    "transliteration": "jawaab"
+  },
+  {
+    "word": "شهادة",
+    "english": "certificate, degree",
+    "type": "noun",
+    "unit": "Unit 8",
+    "transliteration": "shahaada"
+  },
+  {
+    "word": "تخرّج/يتخرّج",
+    "english": "to graduate",
+    "type": "verb",
+    "unit": "Unit 8",
+    "transliteration": "takharraja/yatakharraj"
+  },
+  {
+    "word": "فهم/يفهم",
+    "english": "to understand",
+    "type": "verb",
+    "unit": "Unit 8",
+    "transliteration": "fahima/yafham"
+  },
+  {
+    "word": "فهم",
+    "english": "understanding",
+    "type": "noun",
+    "unit": "Unit 8",
+    "transliteration": "fahm"
+  },
+  {
+    "word": "نسي/ينسى",
+    "english": "to forget",
+    "type": "verb",
+    "unit": "Unit 8",
+    "transliteration": "nasiya/yansaa"
+  },
+  {
+    "word": "نسيان",
+    "english": "forgetting",
+    "type": "noun",
+    "unit": "Unit 8",
+    "transliteration": "nisyaan"
+  },
+  {
+    "word": "حفظ/يحفظ",
+    "english": "to memorise",
+    "type": "verb",
+    "unit": "Unit 8",
+    "transliteration": "hafiza/yahfaz"
+  },
+  {
+    "word": "حفظ",
+    "english": "memorising",
+    "type": "noun",
+    "unit": "Unit 8",
+    "transliteration": "hifz"
+  },
+  {
+    "word": "شاشة",
+    "english": "screen",
+    "type": "noun",
+    "unit": "Unit 9",
+    "transliteration": "shaasha"
+  },
+  {
+    "word": "لوحة مفاتيح",
+    "english": "keyboard",
+    "type": "noun",
+    "unit": "Unit 9",
+    "transliteration": "lawhat mafaateeh"
+  },
+  {
+    "word": "كلمة السرّ",
+    "english": "password",
+    "type": "noun",
+    "unit": "Unit 9",
+    "transliteration": "kalimat as-sirr"
+  },
+  {
+    "word": "صورة/صور",
+    "english": "picture, photo",
+    "type": "noun",
+    "unit": "Unit 9",
+    "transliteration": "soora/suwar"
+  },
+  {
+    "word": "فيديو",
+    "english": "video",
+    "type": "noun",
+    "unit": "Unit 9",
+    "transliteration": "video"
+  },
+  {
+    "word": "خبر/أخبار",
+    "english": "news item",
+    "type": "noun",
+    "unit": "Unit 9",
+    "transliteration": "khabar/akhbaar"
+  },
+  {
+    "word": "صحيفة/صحف",
+    "english": "newspaper",
+    "type": "noun",
+    "unit": "Unit 9",
+    "transliteration": "saheefa/suhuf"
+  },
+  {
+    "word": "إذاعة",
+    "english": "radio",
+    "type": "noun",
+    "unit": "Unit 9",
+    "transliteration": "idhaa'a"
+  },
+  {
+    "word": "تلفاز",
+    "english": "television",
+    "type": "noun",
+    "unit": "Unit 9",
+    "transliteration": "tilfaaz"
+  },
+  {
+    "word": "إعلان",
+    "english": "advert, announcement",
+    "type": "noun",
+    "unit": "Unit 9",
+    "transliteration": "i'laan"
+  },
+  {
+    "word": "شبكة",
+    "english": "network",
+    "type": "noun",
+    "unit": "Unit 9",
+    "transliteration": "shabaka"
+  },
+  {
+    "word": "بطّاريّة",
+    "english": "battery",
+    "type": "noun",
+    "unit": "Unit 9",
+    "transliteration": "battaariyya"
+  },
+  {
+    "word": "شاحن",
+    "english": "charger",
+    "type": "noun",
+    "unit": "Unit 9",
+    "transliteration": "shaahin"
+  },
+  {
+    "word": "رابط",
+    "english": "link",
+    "type": "noun",
+    "unit": "Unit 9",
+    "transliteration": "raabit"
+  },
+  {
+    "word": "أرسل/يرسل",
+    "english": "to send",
+    "type": "verb",
+    "unit": "Unit 9",
+    "transliteration": "arsala/yursil"
+  },
+  {
+    "word": "إرسال",
+    "english": "sending",
+    "type": "noun",
+    "unit": "Unit 9",
+    "transliteration": "irsaal"
+  },
+  {
+    "word": "استقبل/يستقبل",
+    "english": "to receive",
+    "type": "verb",
+    "unit": "Unit 9",
+    "transliteration": "istaqbala/yastaqbil"
+  },
+  {
+    "word": "استقبال",
+    "english": "reception, receiving",
+    "type": "noun",
+    "unit": "Unit 9",
+    "transliteration": "istiqbaal"
+  },
+  {
+    "word": "غائم",
+    "english": "cloudy",
+    "type": "adjective",
+    "unit": "Unit 10",
+    "transliteration": "ghaa'im"
+  },
+  {
+    "word": "شمس",
+    "english": "sun",
+    "type": "noun",
+    "unit": "Unit 10",
+    "transliteration": "shams"
+  },
+  {
+    "word": "حرارة",
+    "english": "heat, temperature",
+    "type": "noun",
+    "unit": "Unit 10",
+    "transliteration": "haraara"
+  },
+  {
+    "word": "بارد",
+    "english": "cold",
+    "type": "adjective",
+    "unit": "Unit 10",
+    "transliteration": "baarid"
+  },
+  {
+    "word": "رطوبة",
+    "english": "humidity",
+    "type": "noun",
+    "unit": "Unit 10",
+    "transliteration": "rutooba"
+  },
+  {
+    "word": "رعد",
+    "english": "thunder",
+    "type": "noun",
+    "unit": "Unit 10",
+    "transliteration": "ra'd"
+  },
+  {
+    "word": "برق",
+    "english": "lightning",
+    "type": "noun",
+    "unit": "Unit 10",
+    "transliteration": "barq"
+  },
+  {
+    "word": "ضباب",
+    "english": "fog",
+    "type": "noun",
+    "unit": "Unit 10",
+    "transliteration": "dabaab"
+  },
+  {
+    "word": "فصل/فصول",
+    "english": "season",
+    "type": "noun",
+    "unit": "Unit 10",
+    "transliteration": "fasl/fusool"
+  },
+  {
+    "word": "بحر/بحار",
+    "english": "sea",
+    "type": "noun",
+    "unit": "Unit 10",
+    "transliteration": "bahr/bihaar"
+  },
+  {
+    "word": "جبل/جبال",
+    "english": "mountain",
+    "type": "noun",
+    "unit": "Unit 10",
+    "transliteration": "jabal/jibaal"
+  },
+  {
+    "word": "نهر/أنهار",
+    "english": "river",
+    "type": "noun",
+    "unit": "Unit 10",
+    "transliteration": "nahr/anhaar"
+  },
+  {
+    "word": "غابة",
+    "english": "forest",
+    "type": "noun",
+    "unit": "Unit 10",
+    "transliteration": "ghaaba"
+  },
+  {
+    "word": "صحراء",
+    "english": "desert",
+    "type": "noun",
+    "unit": "Unit 10",
+    "transliteration": "sahraa'"
+  },
+  {
+    "word": "شجرة/أشجار",
+    "english": "tree",
+    "type": "noun",
+    "unit": "Unit 10",
+    "transliteration": "shajara/ashjaar"
+  },
+  {
+    "word": "حمّى",
+    "english": "fever",
+    "type": "noun",
+    "unit": "Unit 11",
+    "transliteration": "hummaa"
+  },
+  {
+    "word": "سعال",
+    "english": "cough",
+    "type": "noun",
+    "unit": "Unit 11",
+    "transliteration": "su'aal"
+  },
+  {
+    "word": "زكام",
+    "english": "cold (illness)",
+    "type": "noun",
+    "unit": "Unit 11",
+    "transliteration": "zukaam"
+  },
+  {
+    "word": "مستشفى",
+    "english": "hospital",
+    "type": "noun",
+    "unit": "Unit 11",
+    "transliteration": "mustashfaa"
+  },
+  {
+    "word": "صيدليّة",
+    "english": "pharmacy",
+    "type": "noun",
+    "unit": "Unit 11",
+    "transliteration": "saydaliyya"
+  },
+  {
+    "word": "جرح/جروح",
+    "english": "wound, cut",
+    "type": "noun",
+    "unit": "Unit 11",
+    "transliteration": "jurh/jurooh"
+  },
+  {
+    "word": "مريض/مرضى",
+    "english": "ill; patient",
+    "type": "adjective",
+    "unit": "Unit 11",
+    "transliteration": "mareed/mardaa"
+  },
+  {
+    "word": "شفي/يشفى",
+    "english": "to recover, to get better",
+    "type": "verb",
+    "unit": "Unit 11",
+    "transliteration": "shufiya/yushfaa"
+  },
+  {
+    "word": "لوحة",
+    "english": "painting",
+    "type": "noun",
+    "unit": "Unit 12",
+    "transliteration": "lawha"
+  },
+  {
+    "word": "فنّان",
+    "english": "artist",
+    "type": "noun",
+    "unit": "Unit 12",
+    "transliteration": "fannaan"
+  },
+  {
+    "word": "مسرح",
+    "english": "theatre",
+    "type": "noun",
+    "unit": "Unit 12",
+    "transliteration": "masrah"
+  },
+  {
+    "word": "فيلم/أفلام",
+    "english": "film",
+    "type": "noun",
+    "unit": "Unit 12",
+    "transliteration": "film/aflaam"
+  },
+  {
+    "word": "قصّة/قصص",
+    "english": "story",
+    "type": "noun",
+    "unit": "Unit 12",
+    "transliteration": "qissa/qisas"
+  },
+  {
+    "word": "متحف/متاحف",
+    "english": "museum",
+    "type": "noun",
+    "unit": "Unit 12",
+    "transliteration": "mathaf/mataahif"
+  },
+  {
+    "word": "تاريخ",
+    "english": "history",
+    "type": "noun",
+    "unit": "Unit 12",
+    "transliteration": "taareekh"
+  },
+  {
+    "word": "ثقافة",
+    "english": "culture",
+    "type": "noun",
+    "unit": "Unit 12",
+    "transliteration": "thaqaafa"
+  },
+  {
+    "word": "تقليد/تقاليد",
+    "english": "tradition",
+    "type": "noun",
+    "unit": "Unit 12",
+    "transliteration": "taqleed/taqaaleed"
+  },
+  {
+    "word": "مهرجان",
+    "english": "festival",
+    "type": "noun",
+    "unit": "Unit 12",
+    "transliteration": "mahrajaan"
+  },
+  {
+    "word": "غنّى/يغنّي",
+    "english": "to sing",
+    "type": "verb",
+    "unit": "Unit 12",
+    "transliteration": "ghannaa/yughannee"
+  },
+  {
+    "word": "غناء",
+    "english": "singing",
+    "type": "noun",
+    "unit": "Unit 12",
+    "transliteration": "ghinaa'"
+  },
+  {
+    "word": "عمارة",
+    "english": "architecture",
+    "type": "noun",
+    "unit": "Unit 12",
+    "transliteration": "'imaara"
   }
 ]
