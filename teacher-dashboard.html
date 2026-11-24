@@ -74,6 +74,12 @@
   .report-actions { display: flex; flex-direction: column; gap: 6px; flex-shrink: 0; }
   .report-actions button { width: auto; padding: 7px 12px; font-size: 13px; }
   .report-actions .secondary { background: transparent; border: 1px solid var(--border); color: #4a4438; font-weight: 500; }
+  .invite-panel { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .invite-code { font-size: 28px; font-weight: 700; letter-spacing: 4px; font-family: ui-monospace, Menlo, monospace; }
+  .invite-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+  .invite-actions button { width: auto; padding: 10px 16px; display: inline-flex; align-items: center; gap: 8px; }
+  .wa-btn { background: #25D366; color: #fff; }
+  .copy-btn { background: transparent; border: 1px solid var(--border); color: #4a4438; font-weight: 500; }
   .count-badge { background: var(--red-bg); color: var(--red-text); border-radius: 10px; padding: 1px 8px; font-size: 12px; margin-left: 6px; }
 </style>
 </head>
@@ -117,6 +123,19 @@ let myGroups = [];
 // going into the page (a username or note can't inject HTML or scripts).
 function esc(v) {
   return String(v == null ? '' : v).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+// Where students get the app. While the app is still in Google Play testing,
+// swap this for the testing opt-in link from Play Console.
+const APP_LINK = 'https://play.google.com/store/apps/details?id=com.rokaf1993.arabicflashcards';
+
+function inviteMessage(group) {
+  return [
+    `Assalamu alaikum! Join my Arabic group "${group.name}" on Halaqa 📚`,
+    '',
+    `1. Get the app: ${APP_LINK}`,
+    '2. Open it and tap 👥 Halaqa (top right) → Join a Group',
+    `3. Enter the code: ${group.code}`,
+  ].join('\n');
 }
 const ISSUE_LABELS = { sound: '🔊 Sound', spelling: '✏️ Spelling', meaning: '📖 Meaning', other: '💬 Other' };
 
@@ -188,6 +207,36 @@ function formatLastActive(iso) {
   return `${Math.floor(hours / 24)}d ago`;
 }
 
+// ---------- Invite students (WhatsApp / copy) ----------
+function invitePanelHtml(group) {
+  return `
+    <div class="panel invite-panel">
+      <div>
+        <h3 style="margin-bottom:6px">Invite students · join code</h3>
+        <div class="invite-code">${esc(group.code)}</div>
+      </div>
+      <div class="invite-actions">
+        <button class="wa-btn" id="wa-share">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>
+          Share on WhatsApp
+        </button>
+        <button class="copy-btn" id="copy-invite">Copy invite</button>
+      </div>
+    </div>`;
+}
+function wireInviteButtons(group) {
+  const text = inviteMessage(group);
+  document.getElementById('wa-share').onclick = () => {
+    window.open('https://wa.me/?text=' + encodeURIComponent(text), '_blank', 'noopener');
+  };
+  const copyBtn = document.getElementById('copy-invite');
+  copyBtn.onclick = async () => {
+    try { await navigator.clipboard.writeText(text); copyBtn.textContent = 'Copied ✓'; }
+    catch (e) { window.prompt('Copy this invite:', text); }
+    setTimeout(() => { copyBtn.textContent = 'Copy invite'; }, 2000);
+  };
+}
+
 // ---------- Load one group's full data ----------
 async function loadGroup(groupId) {
   const group = myGroups.find((g) => g.id === groupId);
@@ -197,7 +246,8 @@ async function loadGroup(groupId) {
   const { data: memberRows } = await supabase.from('group_members').select('user_id').eq('group_id', groupId);
   const userIds = (memberRows || []).map((r) => r.user_id);
   if (userIds.length === 0) {
-    content.innerHTML = '<p class="empty-text">No members in this group yet.</p>';
+    content.innerHTML = invitePanelHtml(group) + '<p class="empty-text">No members in this group yet — send the invite above.</p>';
+    wireInviteButtons(group);
     return;
   }
 
@@ -250,7 +300,7 @@ async function loadGroup(groupId) {
 
   const lesson = (lessonRows || [])[0];
 
-  content.innerHTML = `
+  content.innerHTML = invitePanelHtml(group) + `
     <div class="panel" id="reports-panel">
       <h3>Reported words${reportedWords.length ? `<span class="count-badge">${reportedWords.length}</span>` : ''}</h3>
       ${reportedWords.length
@@ -299,6 +349,8 @@ async function loadGroup(groupId) {
         : '<p style="color:#9c9382; font-size:14px; margin:0">No notes yet.</p>'}
     </div>
   `;
+
+  wireInviteButtons(group);
 
   content.querySelectorAll('[data-report]').forEach((btn) => {
     btn.onclick = async () => {
