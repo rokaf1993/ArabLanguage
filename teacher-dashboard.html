@@ -64,6 +64,17 @@
   .note-author { font-size: 12px; font-weight: 700; color: #555; margin-bottom: 3px; }
   .empty-text { color: #9c9382; font-size: 14px; text-align: center; padding: 40px 0; }
   .loading { text-align: center; padding: 40px; color: #9c9382; }
+  .report-row { display: flex; gap: 14px; align-items: flex-start; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid var(--border); }
+  .report-row:last-child { border-bottom: none; }
+  .report-word { font-size: 24px; font-weight: 700; direction: rtl; }
+  .report-english { color: #9c9382; font-size: 13px; margin-left: 8px; }
+  .issue-tag { display: inline-block; border-radius: 6px; padding: 3px 9px; font-size: 12px; font-weight: 600; margin: 6px 6px 0 0; background: var(--amber-bg); color: var(--amber-text); }
+  .report-note { font-size: 13px; color: #4a4438; margin-top: 6px; }
+  .report-note b { color: #555; }
+  .report-actions { display: flex; flex-direction: column; gap: 6px; flex-shrink: 0; }
+  .report-actions button { width: auto; padding: 7px 12px; font-size: 13px; }
+  .report-actions .secondary { background: transparent; border: 1px solid var(--border); color: #4a4438; font-weight: 500; }
+  .count-badge { background: var(--red-bg); color: var(--red-text); border-radius: 10px; padding: 1px 8px; font-size: 12px; margin-left: 6px; }
 </style>
 </head>
 <body>
@@ -101,6 +112,13 @@ const content = document.getElementById('content');
 const groupTitle = document.getElementById('group-title');
 
 let myGroups = [];
+
+// Everything below comes from students' accounts, so it is escaped before
+// going into the page (a username or note can't inject HTML or scripts).
+function esc(v) {
+  return String(v == null ? '' : v).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+const ISSUE_LABELS = { sound: '🔊 Sound', spelling: '✏️ Spelling', meaning: '📖 Meaning', other: '💬 Other' };
 
 // ---------- Auth ----------
 document.getElementById('login-btn').onclick = async () => {
@@ -142,7 +160,7 @@ async function loadMyGroups(userId) {
   }
   myGroups = data;
   groupSelect.style.display = 'block';
-  groupSelect.innerHTML = myGroups.map((g) => `<option value="${g.id}">${g.name}</option>`).join('');
+  groupSelect.innerHTML = myGroups.map((g) => `<option value="${esc(g.id)}">${esc(g.name)}</option>`).join('');
   groupSelect.onchange = () => loadGroup(groupSelect.value);
   loadGroup(myGroups[0].id);
 }
@@ -183,14 +201,25 @@ async function loadGroup(groupId) {
     return;
   }
 
-  const [{ data: profiles }, { data: masteryRows }, { data: goalRows }, { data: sessionRows }, { data: lessonRows }, { data: noteRows }] = await Promise.all([
+  const [{ data: profiles }, { data: masteryRows }, { data: goalRows }, { data: sessionRows }, { data: lessonRows }, { data: noteRows }, { data: reportRows }] = await Promise.all([
     supabase.from('profiles').select('id, username').in('id', userIds),
     supabase.from('word_mastery_log').select('user_id, word, mastery, is_wrong').in('user_id', userIds),
     supabase.from('daily_goal_log').select('user_id, date, hit_goal').in('user_id', userIds).gte('date', new Date(Date.now() - 60 * 86400000).toISOString().slice(0, 10)),
     supabase.from('app_sessions').select('user_id, started_at, duration_seconds').in('user_id', userIds),
     supabase.from('group_lessons').select('id, title, theme_key, custom_words').eq('group_id', groupId).order('created_at', { ascending: false }).limit(1),
     supabase.from('group_notes').select('user_id, word, message, created_at').eq('group_id', groupId).order('created_at', { ascending: false }).limit(10),
+    supabase.from('word_reports').select('id, user_id, word, english, issue, note, created_at').in('user_id', userIds).eq('status', 'open').order('created_at', { ascending: false }).limit(500),
   ]);
+
+  // Reported words: one row per word, newest first, with every note.
+  const reportsByWord = {};
+  (reportRows || []).forEach((r) => {
+    const w = (reportsByWord[r.word] = reportsByWord[r.word] || { word: r.word, english: r.english, ids: [], issues: {}, notes: [] });
+    w.ids.push(r.id);
+    w.issues[r.issue] = (w.issues[r.issue] || 0) + 1;
+    if (r.note) w.notes.push({ user_id: r.user_id, note: r.note });
+  });
+  const reportedWords = Object.values(reportsByWord);
 
   // Per-member aggregates
   const byUser = {};
@@ -222,17 +251,34 @@ async function loadGroup(groupId) {
   const lesson = (lessonRows || [])[0];
 
   content.innerHTML = `
+    <div class="panel" id="reports-panel">
+      <h3>Reported words${reportedWords.length ? `<span class="count-badge">${reportedWords.length}</span>` : ''}</h3>
+      ${reportedWords.length
+        ? reportedWords.map((w, i) => `
+          <div class="report-row">
+            <div>
+              <span class="report-word">${esc(w.word)}</span><span class="report-english">${esc(w.english || '')}</span>
+              <div>${Object.entries(w.issues).map(([k, n]) => `<span class="issue-tag">${ISSUE_LABELS[k] || esc(k)}${n > 1 ? ' ×' + n : ''}</span>`).join('')}</div>
+              ${w.notes.map((n) => `<div class="report-note"><b>${esc((byUser[n.user_id] || {}).username || 'Someone')}:</b> ${esc(n.note)}</div>`).join('')}
+            </div>
+            <div class="report-actions">
+              <button data-report="${i}" data-status="fixed">Fixed</button>
+              <button class="secondary" data-report="${i}" data-status="dismissed">Not a problem</button>
+            </div>
+          </div>`).join('')
+        : '<p style="color:#9c9382; font-size:14px; margin:0">No reported words. Students can flag a word with ⚑ on its card in the app.</p>'}
+    </div>
     <div class="stat-row">
       <div class="stat-card"><p>Students</p><p>${students.length}</p></div>
       <div class="stat-card"><p>Average streak</p><p>${avgStreak} days</p></div>
       <div class="stat-card"><p>Words needing review</p><p>${totalRed}</p></div>
     </div>
-    ${lesson ? `<div class="panel"><h3>Current lesson</h3><p style="margin:0; font-size:16px">📚 ${lesson.title || (lesson.theme_key ? 'Theme: ' + lesson.theme_key : (lesson.custom_words || []).length + ' custom words')}</p></div>` : ''}
+    ${lesson ? `<div class="panel"><h3>Current lesson</h3><p style="margin:0; font-size:16px">📚 ${esc(lesson.title || (lesson.theme_key ? 'Theme: ' + lesson.theme_key : (lesson.custom_words || []).length + ' custom words'))}</p></div>` : ''}
     <table>
       <tr><th>Student</th><th>Known</th><th>Learning</th><th>Wrong</th><th>Streak</th><th>Last active</th></tr>
       ${students.map((s) => `
         <tr>
-          <td><strong>${s.username || 'Someone'}</strong></td>
+          <td><strong>${esc(s.username || 'Someone')}</strong></td>
           <td><span class="pill pill-green">${s.green}</span></td>
           <td><span class="pill pill-amber">${s.amber}</span></td>
           <td><span class="pill pill-red">${s.red}</span></td>
@@ -243,16 +289,30 @@ async function loadGroup(groupId) {
     <div class="panel">
       <h3>Most missed words across the group</h3>
       ${topMissed.length
-        ? topMissed.map(([word, count]) => `<span class="missed-tag">${word} (${count})</span>`).join('')
+        ? topMissed.map(([word, count]) => `<span class="missed-tag">${esc(word)} (${count})</span>`).join('')
         : '<p style="color:#9c9382; font-size:14px; margin:0">No wrong answers logged yet.</p>'}
     </div>
     <div class="panel">
       <h3>Notes from the group</h3>
       ${(noteRows || []).length
-        ? noteRows.map((n) => `<div class="note-card"><div class="note-author">${(byUser[n.user_id] || {}).username || 'Someone'}${n.word ? ' · ' + n.word : ''}</div>${n.message}</div>`).join('')
+        ? noteRows.map((n) => `<div class="note-card"><div class="note-author">${esc((byUser[n.user_id] || {}).username || 'Someone')}${n.word ? ' · ' + esc(n.word) : ''}</div>${esc(n.message)}</div>`).join('')
         : '<p style="color:#9c9382; font-size:14px; margin:0">No notes yet.</p>'}
     </div>
   `;
+
+  content.querySelectorAll('[data-report]').forEach((btn) => {
+    btn.onclick = async () => {
+      const w = reportedWords[Number(btn.dataset.report)];
+      const { data: { session } } = await supabase.auth.getSession();
+      btn.disabled = true;
+      const { error } = await supabase
+        .from('word_reports')
+        .update({ status: btn.dataset.status, resolved_at: new Date().toISOString(), resolved_by: session?.user?.id || null })
+        .in('id', w.ids);
+      if (error) { btn.disabled = false; alert('Could not update: ' + error.message); return; }
+      loadGroup(groupId);
+    };
+  });
 }
 </script>
 </body>
