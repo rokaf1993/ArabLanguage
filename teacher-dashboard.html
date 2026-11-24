@@ -37,6 +37,11 @@
   }
   button:disabled { opacity: 0.6; cursor: default; }
   #error-text { color: #B71C1C; font-size: 13px; margin: 4px 0 12px; min-height: 16px; }
+  #info-text { color: var(--green-text); background: var(--green-bg); border-radius: 8px; font-size: 13px; padding: 10px 12px; margin: 0 0 12px; display: none; }
+  .auth-links { display: flex; justify-content: space-between; margin-top: 16px; font-size: 13px; }
+  .auth-links a { color: #8D6E20; text-decoration: none; cursor: pointer; }
+  .auth-links a:hover { text-decoration: underline; }
+  .auth-field { display: none; }
   #dashboard { display: none; max-width: 1100px; margin: 0 auto; padding: 32px 24px 80px; }
   .top-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; }
   .top-row h1 { font-size: 20px; margin: 0; }
@@ -87,12 +92,19 @@
 
 <div id="login-screen">
   <div class="login-card">
-    <h1>Halaqa — Teacher Dashboard</h1>
-    <p>Log in with the same account you use in the app.</p>
+    <h1 id="auth-title">Halaqa — Teacher Dashboard</h1>
+    <p id="auth-subtitle">Log in with the same account you use in the app.</p>
+    <input id="signup-username" class="auth-field" type="text" placeholder="Username (shown to your students)" autocomplete="nickname" maxlength="24">
     <input id="login-email" type="email" placeholder="Email" autocomplete="username">
     <input id="login-password" type="password" placeholder="Password" autocomplete="current-password">
+    <input id="new-password-2" class="auth-field" type="password" placeholder="Type the new password again" autocomplete="new-password">
+    <p id="info-text"></p>
     <p id="error-text"></p>
     <button id="login-btn">Log in</button>
+    <div class="auth-links">
+      <a id="link-left">Forgot password?</a>
+      <a id="link-right">New here? Create an account</a>
+    </div>
   </div>
 </div>
 
@@ -139,16 +151,110 @@ function inviteMessage(group) {
 }
 const ISSUE_LABELS = { sound: '🔊 Sound', spelling: '✏️ Spelling', meaning: '📖 Meaning', other: '💬 Other' };
 
-// ---------- Auth ----------
-document.getElementById('login-btn').onclick = async () => {
-  const email = document.getElementById('login-email').value.trim();
-  const password = document.getElementById('login-password').value;
-  errorText.textContent = '';
-  if (!email || !password) { errorText.textContent = 'Enter your email and password.'; return; }
-  const { error } = await supabase.auth.signInWithPassword({ email, password });
-  if (error) { errorText.textContent = error.message; return; }
-  await afterLogin();
+// ---------- Auth: log in · create account · forgot password · set new password ----------
+// Reset links come back to this page (if it's on Supabase's allowed redirect
+// list; otherwise Supabase sends people to the Halaqa Teacher site, which
+// handles resets too).
+const PAGE_URL = location.origin + location.pathname;
+const el = (id) => document.getElementById(id);
+const infoText = el('info-text');
+let authMode = 'login';
+
+const AUTH_MODES = {
+  login: { title: 'Halaqa — Teacher Dashboard', sub: 'Log in with the same account you use in the app.', btn: 'Log in', fields: ['login-email', 'login-password'], left: ['Forgot password?', 'forgot'], right: ['New here? Create an account', 'signup'] },
+  signup: { title: 'Create your Halaqa account', sub: 'The same account works in the Halaqa app and on this dashboard.', btn: 'Create account', fields: ['signup-username', 'login-email', 'login-password'], left: ['', null], right: ['Have an account? Log in', 'login'] },
+  forgot: { title: 'Reset your password', sub: "Enter your email and we'll send you a link to set a new password.", btn: 'Send reset link', fields: ['login-email'], left: ['', null], right: ['Back to log in', 'login'] },
+  newpass: { title: 'Set a new password', sub: 'Choose a new password for your Halaqa account (at least 6 characters).', btn: 'Save new password', fields: ['login-password', 'new-password-2'], left: ['', null], right: ['', null] },
 };
+function setAuthMode(mode, keepMessages) {
+  authMode = mode;
+  const m = AUTH_MODES[mode];
+  el('auth-title').textContent = m.title;
+  el('auth-subtitle').textContent = m.sub;
+  el('login-btn').textContent = m.btn;
+  ['signup-username', 'login-email', 'login-password', 'new-password-2'].forEach((id) => {
+    el(id).style.display = m.fields.includes(id) ? 'block' : 'none';
+  });
+  el('login-password').placeholder = mode === 'newpass' ? 'New password' : 'Password';
+  el('login-password').autocomplete = mode === 'login' ? 'current-password' : 'new-password';
+  [['link-left', m.left], ['link-right', m.right]].forEach(([id, [label, target]]) => {
+    el(id).textContent = label; el(id).style.visibility = target ? 'visible' : 'hidden';
+    el(id).onclick = () => target && setAuthMode(target);
+  });
+  if (!keepMessages) { errorText.textContent = ''; infoText.style.display = 'none'; }
+}
+function showInfo(msg) { infoText.textContent = msg; infoText.style.display = 'block'; errorText.textContent = ''; }
+
+async function sendReset(email) {
+  const btn = el('login-btn'); btn.disabled = true;
+  const { error } = await supabase.auth.resetPasswordForEmail(email, { redirectTo: PAGE_URL });
+  btn.disabled = false;
+  if (error) {
+    errorText.textContent = /rate|seconds|many/i.test(error.message)
+      ? 'Too many emails were requested just now. Please wait a few minutes and try again.'
+      : error.message;
+    return false;
+  }
+  showInfo(`We've emailed a link to ${email}. Open it to set your password (check Spam if it isn't in your inbox).`);
+  return true;
+}
+
+el('login-btn').onclick = async () => {
+  const email = el('login-email').value.trim();
+  const password = el('login-password').value;
+  errorText.textContent = '';
+  if (authMode === 'login') {
+    if (!email || !password) { errorText.textContent = 'Enter your email and password.'; return; }
+    const { error } = await supabase.auth.signInWithPassword({ email, password });
+    if (error) { errorText.textContent = error.message; return; }
+    await afterLogin();
+  } else if (authMode === 'signup') {
+    const username = el('signup-username').value.trim();
+    if (!/^[A-Za-z0-9_]{3,24}$/.test(username)) { errorText.textContent = 'Username: 3–24 letters, numbers or _ (no spaces).'; return; }
+    if (!email) { errorText.textContent = 'Enter your email.'; return; }
+    if (password.length < 6) { errorText.textContent = 'Password must be at least 6 characters.'; return; }
+    const { data, error } = await supabase.auth.signUp({ email, password, options: { data: { username }, emailRedirectTo: PAGE_URL } });
+    if (error) { errorText.textContent = error.message; return; }
+    if (data.session) { await afterLogin(); return; }
+    setAuthMode('login', true);
+    showInfo('Account created. Check your email for a confirmation link, then log in here.');
+  } else if (authMode === 'forgot') {
+    if (!email) { errorText.textContent = 'Enter your email.'; return; }
+    await sendReset(email);
+  } else if (authMode === 'newpass') {
+    if (password.length < 6) { errorText.textContent = 'Password must be at least 6 characters.'; return; }
+    if (password !== el('new-password-2').value) { errorText.textContent = "The two passwords don't match."; return; }
+    const { error } = await supabase.auth.updateUser({ password });
+    if (error) { errorText.textContent = error.message; return; }
+    history.replaceState(null, '', PAGE_URL);
+    await afterLogin();
+  }
+};
+
+// Opening a reset link signs the person in for one purpose: choosing a new password.
+supabase.auth.onAuthStateChange((event) => {
+  if (event === 'PASSWORD_RECOVERY') {
+    dashboard.style.display = 'none';
+    loginScreen.style.display = 'flex';
+    setAuthMode('newpass');
+  }
+});
+
+// A personal link like teacher-dashboard.html?reset=name@example.com sends that
+// person their reset email as soon as they open it (once per visit).
+(function handleResetLink() {
+  const params = new URLSearchParams(location.search);
+  const email = (params.get('reset') || '').trim();
+  if (params.get('signup') !== null) setAuthMode('signup'); else setAuthMode('login');
+  if (!email) return;
+  setAuthMode('forgot');
+  el('login-email').value = email;
+  const key = 'resetSent:' + email.toLowerCase();
+  let already = false;
+  try { already = sessionStorage.getItem(key) === '1'; } catch (e) {}
+  if (already) { showInfo(`We've already emailed a link to ${email}. Check your inbox (and Spam), or press the button to send another.`); return; }
+  sendReset(email).then((ok) => { if (ok) { try { sessionStorage.setItem(key, '1'); } catch (e) {} } });
+})();
 
 document.getElementById('logout-btn').onclick = async () => {
   await supabase.auth.signOut();
@@ -166,7 +272,7 @@ async function afterLogin() {
 
 // Restore session on page reload
 supabase.auth.getSession().then(({ data: { session } }) => {
-  if (session) afterLogin();
+  if (session && authMode !== 'newpass' && !/type=recovery/.test(location.hash)) afterLogin();
 });
 
 // ---------- Groups the logged-in teacher created ----------
