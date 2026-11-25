@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Halaqa — Teacher Dashboard</title>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
 <style>
   :root {
     --gold: #C9A227; --ink: #161311; --cream: #FBF8F1; --border: #e6ddc8;
@@ -138,7 +138,7 @@
 <script>
 const SUPABASE_URL = 'https://xknbwtdxpmlqcictxojz.supabase.co';
 const SUPABASE_ANON_KEY = 'sb_publishable_nGKkwbJEbpC-UtT0YEgzzw_PFDU3GJn';
-const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 const loginScreen = document.getElementById('login-screen');
 const dashboard = document.getElementById('dashboard');
@@ -205,7 +205,7 @@ function showInfo(msg) { infoText.textContent = msg; infoText.style.display = 'b
 
 async function sendReset(email) {
   const btn = el('login-btn'); btn.disabled = true;
-  const { error } = await supabase.auth.resetPasswordForEmail(email, { redirectTo: PAGE_URL });
+  const { error } = await sb.auth.resetPasswordForEmail(email, { redirectTo: PAGE_URL });
   btn.disabled = false;
   if (error) {
     errorText.textContent = /rate|seconds|many/i.test(error.message)
@@ -223,7 +223,7 @@ el('login-btn').onclick = async () => {
   errorText.textContent = '';
   if (authMode === 'login') {
     if (!email || !password) { errorText.textContent = 'Enter your email and password.'; return; }
-    const { error } = await supabase.auth.signInWithPassword({ email, password });
+    const { error } = await sb.auth.signInWithPassword({ email, password });
     if (error) { errorText.textContent = error.message; return; }
     await afterLogin();
   } else if (authMode === 'signup') {
@@ -231,7 +231,7 @@ el('login-btn').onclick = async () => {
     if (!/^[A-Za-z0-9_]{3,24}$/.test(username)) { errorText.textContent = 'Username: 3–24 letters, numbers or _ (no spaces).'; return; }
     if (!email) { errorText.textContent = 'Enter your email.'; return; }
     if (password.length < 6) { errorText.textContent = 'Password must be at least 6 characters.'; return; }
-    const { data, error } = await supabase.auth.signUp({ email, password, options: { data: { username }, emailRedirectTo: PAGE_URL } });
+    const { data, error } = await sb.auth.signUp({ email, password, options: { data: { username }, emailRedirectTo: PAGE_URL } });
     if (error) { errorText.textContent = error.message; return; }
     if (data.session) { await afterLogin(); return; }
     setAuthMode('login', true);
@@ -242,7 +242,7 @@ el('login-btn').onclick = async () => {
   } else if (authMode === 'newpass') {
     if (password.length < 6) { errorText.textContent = 'Password must be at least 6 characters.'; return; }
     if (password !== el('new-password-2').value) { errorText.textContent = "The two passwords don't match."; return; }
-    const { error } = await supabase.auth.updateUser({ password });
+    const { error } = await sb.auth.updateUser({ password });
     if (error) { errorText.textContent = error.message; return; }
     history.replaceState(null, '', PAGE_URL);
     await afterLogin();
@@ -250,7 +250,7 @@ el('login-btn').onclick = async () => {
 };
 
 // Opening a reset link signs the person in for one purpose: choosing a new password.
-supabase.auth.onAuthStateChange((event) => {
+sb.auth.onAuthStateChange((event) => {
   if (event === 'PASSWORD_RECOVERY') {
     dashboard.style.display = 'none';
     loginScreen.style.display = 'flex';
@@ -275,7 +275,7 @@ supabase.auth.onAuthStateChange((event) => {
 })();
 
 document.getElementById('logout-btn').onclick = async () => {
-  await supabase.auth.signOut();
+  await sb.auth.signOut();
   dashboard.style.display = 'none';
   loginScreen.style.display = 'flex';
 };
@@ -283,13 +283,13 @@ document.getElementById('logout-btn').onclick = async () => {
 let currentUserId = null;
 let isAdmin = false;
 async function afterLogin() {
-  const { data: { session } } = await supabase.auth.getSession();
+  const { data: { session } } = await sb.auth.getSession();
   if (!session) return;
   currentUserId = session.user.id;
   loginScreen.style.display = 'none';
   dashboard.style.display = 'block';
   // Admins (listed in app_admins) also get the Words page.
-  const { data: adminRow } = await supabase.from('app_admins').select('user_id').eq('user_id', currentUserId).maybeSingle();
+  const { data: adminRow } = await sb.from('app_admins').select('user_id').eq('user_id', currentUserId).maybeSingle();
   isAdmin = !!adminRow;
   el('nav-tabs').style.display = isAdmin ? 'flex' : 'none';
   el('tab-students').onclick = () => showTab('students');
@@ -316,13 +316,13 @@ function showTab(tab) {
 }
 
 // Restore session on page reload
-supabase.auth.getSession().then(({ data: { session } }) => {
+sb.auth.getSession().then(({ data: { session } }) => {
   if (session && authMode !== 'newpass' && !/type=recovery/.test(location.hash)) afterLogin();
 });
 
 // ---------- Groups the logged-in teacher created ----------
 async function loadMyGroups(userId) {
-  const { data, error } = await supabase.from('groups').select('id, name, code').eq('created_by', userId);
+  const { data, error } = await sb.from('groups').select('id, name, code').eq('created_by', userId);
   if (error || !data || data.length === 0) {
     content.innerHTML = '<p class="empty-text">You don\'t have any groups yet — create one from the app first (Halaqa button in the top bar).</p>';
     groupSelect.style.display = 'none';
@@ -413,12 +413,12 @@ function parseWords(text) {
 // ---------- Admins: every open report from every student ----------
 async function loadAllReports() {
   content.innerHTML = '<p class="loading">Loading…</p>';
-  const { data: rows, error } = await supabase.from('word_reports')
+  const { data: rows, error } = await sb.from('word_reports')
     .select('id, user_id, word, english, issue, note, created_at')
     .eq('status', 'open').order('created_at', { ascending: false }).limit(1000);
   if (error) { content.innerHTML = `<p class="empty-text">Could not load reports: ${esc(error.message)}</p>`; return; }
   const ids = [...new Set((rows || []).map((r) => r.user_id))];
-  const { data: profs } = ids.length ? await supabase.from('profiles').select('id, username').in('id', ids) : { data: [] };
+  const { data: profs } = ids.length ? await sb.from('profiles').select('id, username').in('id', ids) : { data: [] };
   const names = {}; (profs || []).forEach((p) => { names[p.id] = p.username; });
   const byWord = {};
   (rows || []).forEach((r) => {
@@ -452,7 +452,7 @@ async function loadAllReports() {
     btn.onclick = async () => {
       const w = words[Number(btn.dataset.allreport)];
       btn.disabled = true;
-      const { error: e } = await supabase.from('word_reports')
+      const { error: e } = await sb.from('word_reports')
         .update({ status: btn.dataset.status, resolved_at: new Date().toISOString(), resolved_by: currentUserId })
         .in('id', w.ids);
       if (e) { btn.disabled = false; alert('Could not update: ' + e.message); return; }
@@ -469,7 +469,7 @@ async function loadWordsPage() {
       mainListWords = new Set((await res.json()).map((c) => normWord(c.word)));
     } catch (e) { mainListWords = new Set(); }
   }
-  const { data, error } = await supabase.from('custom_words').select('id, word, english, root, note, topic, created_at').eq('active', true).order('created_at', { ascending: false });
+  const { data, error } = await sb.from('custom_words').select('id, word, english, root, note, topic, created_at').eq('active', true).order('created_at', { ascending: false });
   customWordsCache = error ? [] : (data || []);
   const customTopics = [...new Set(customWordsCache.map((w) => w.topic))].filter((t) => !STANDARD_TOPICS.includes(t));
   const byTopic = {};
@@ -512,7 +512,7 @@ async function loadWordsPage() {
     b.onclick = async () => {
       const w = customWordsCache.find((x) => x.id === b.dataset.remove);
       if (!confirm(`Remove "${w.word}" (${w.english}) from the app?`)) return;
-      const { error: err } = await supabase.from('custom_words').update({ active: false, updated_at: new Date().toISOString() }).eq('id', w.id);
+      const { error: err } = await sb.from('custom_words').update({ active: false, updated_at: new Date().toISOString() }).eq('id', w.id);
       if (err) { alert('Could not remove: ' + err.message); return; }
       loadWordsPage();
     };
@@ -563,7 +563,7 @@ async function saveWords() {
     transliteration: r.transliteration || null, topic: r.topic,
   }));
   const btn = el('words-save'); btn.disabled = true; btn.textContent = 'Adding…';
-  const { error } = await supabase.from('custom_words').insert(rows);
+  const { error } = await sb.from('custom_words').insert(rows);
   if (error) { btn.disabled = false; btn.textContent = 'Try again'; alert('Could not add words: ' + error.message); return; }
   await loadWordsPage();
   const area = el('words-preview-area');
@@ -606,7 +606,7 @@ async function loadGroup(groupId) {
   groupTitle.textContent = `Halaqa — ${group.name}`;
   content.innerHTML = '<p class="loading">Loading…</p>';
 
-  const { data: memberRows } = await supabase.from('group_members').select('user_id').eq('group_id', groupId);
+  const { data: memberRows } = await sb.from('group_members').select('user_id').eq('group_id', groupId);
   const userIds = (memberRows || []).map((r) => r.user_id);
   if (userIds.length === 0) {
     content.innerHTML = invitePanelHtml(group) + '<p class="empty-text">No members in this group yet — send the invite above.</p>';
@@ -615,13 +615,13 @@ async function loadGroup(groupId) {
   }
 
   const [{ data: profiles }, { data: masteryRows }, { data: goalRows }, { data: sessionRows }, { data: lessonRows }, { data: noteRows }, { data: reportRows }] = await Promise.all([
-    supabase.from('profiles').select('id, username').in('id', userIds),
-    supabase.from('word_mastery_log').select('user_id, word, mastery, is_wrong').in('user_id', userIds),
-    supabase.from('daily_goal_log').select('user_id, date, hit_goal').in('user_id', userIds).gte('date', new Date(Date.now() - 60 * 86400000).toISOString().slice(0, 10)),
-    supabase.from('app_sessions').select('user_id, started_at, duration_seconds').in('user_id', userIds),
-    supabase.from('group_lessons').select('id, title, theme_key, custom_words').eq('group_id', groupId).order('created_at', { ascending: false }).limit(1),
-    supabase.from('group_notes').select('user_id, word, message, created_at').eq('group_id', groupId).order('created_at', { ascending: false }).limit(10),
-    supabase.from('word_reports').select('id, user_id, word, english, issue, note, created_at').in('user_id', userIds).eq('status', 'open').order('created_at', { ascending: false }).limit(500),
+    sb.from('profiles').select('id, username').in('id', userIds),
+    sb.from('word_mastery_log').select('user_id, word, mastery, is_wrong').in('user_id', userIds),
+    sb.from('daily_goal_log').select('user_id, date, hit_goal').in('user_id', userIds).gte('date', new Date(Date.now() - 60 * 86400000).toISOString().slice(0, 10)),
+    sb.from('app_sessions').select('user_id, started_at, duration_seconds').in('user_id', userIds),
+    sb.from('group_lessons').select('id, title, theme_key, custom_words').eq('group_id', groupId).order('created_at', { ascending: false }).limit(1),
+    sb.from('group_notes').select('user_id, word, message, created_at').eq('group_id', groupId).order('created_at', { ascending: false }).limit(10),
+    sb.from('word_reports').select('id, user_id, word, english, issue, note, created_at').in('user_id', userIds).eq('status', 'open').order('created_at', { ascending: false }).limit(500),
   ]);
 
   // Reported words: one row per word, newest first, with every note.
@@ -718,9 +718,9 @@ async function loadGroup(groupId) {
   content.querySelectorAll('[data-report]').forEach((btn) => {
     btn.onclick = async () => {
       const w = reportedWords[Number(btn.dataset.report)];
-      const { data: { session } } = await supabase.auth.getSession();
+      const { data: { session } } = await sb.auth.getSession();
       btn.disabled = true;
-      const { error } = await supabase
+      const { error } = await sb
         .from('word_reports')
         .update({ status: btn.dataset.status, resolved_at: new Date().toISOString(), resolved_by: session?.user?.id || null })
         .in('id', w.ids);
