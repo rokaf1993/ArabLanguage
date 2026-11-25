@@ -129,6 +129,7 @@
   <div class="nav-tabs" id="nav-tabs">
     <button id="tab-students" class="active">Students</button>
     <button id="tab-words">Words</button>
+    <button id="tab-reports">Reported words</button>
   </div>
   <select id="group-select"></select>
   <div id="content"><p class="loading">Loading…</p></div>
@@ -293,12 +294,18 @@ async function afterLogin() {
   el('nav-tabs').style.display = isAdmin ? 'flex' : 'none';
   el('tab-students').onclick = () => showTab('students');
   el('tab-words').onclick = () => showTab('words');
-  showTab('students');
+  el('tab-reports').onclick = () => showTab('reports');
+  showTab(isAdmin && /[?&]tab=reports/.test(location.search) ? 'reports' : 'students');
 }
 function showTab(tab) {
   el('tab-students').classList.toggle('active', tab === 'students');
   el('tab-words').classList.toggle('active', tab === 'words');
-  if (tab === 'words') {
+  el('tab-reports').classList.toggle('active', tab === 'reports');
+  if (tab === 'reports') {
+    groupSelect.style.display = 'none';
+    groupTitle.textContent = 'Halaqa — Reported words';
+    loadAllReports();
+  } else if (tab === 'words') {
     groupSelect.style.display = 'none';
     groupTitle.textContent = 'Halaqa — Words';
     loadWordsPage();
@@ -401,6 +408,57 @@ function parseWords(text) {
     Object.keys(r).forEach((k) => { r[k] = (r[k] || '').trim(); });
     return r;
   }).filter((r) => r.word || r.english);
+}
+
+// ---------- Admins: every open report from every student ----------
+async function loadAllReports() {
+  content.innerHTML = '<p class="loading">Loading…</p>';
+  const { data: rows, error } = await supabase.from('word_reports')
+    .select('id, user_id, word, english, issue, note, created_at')
+    .eq('status', 'open').order('created_at', { ascending: false }).limit(1000);
+  if (error) { content.innerHTML = `<p class="empty-text">Could not load reports: ${esc(error.message)}</p>`; return; }
+  const ids = [...new Set((rows || []).map((r) => r.user_id))];
+  const { data: profs } = ids.length ? await supabase.from('profiles').select('id, username').in('id', ids) : { data: [] };
+  const names = {}; (profs || []).forEach((p) => { names[p.id] = p.username; });
+  const byWord = {};
+  (rows || []).forEach((r) => {
+    const w = (byWord[r.word] = byWord[r.word] || { word: r.word, english: r.english, ids: [], issues: {}, notes: [], who: new Set(), latest: r.created_at });
+    w.ids.push(r.id);
+    w.issues[r.issue] = (w.issues[r.issue] || 0) + 1;
+    w.who.add(names[r.user_id] || 'Someone');
+    if (r.note) w.notes.push({ name: names[r.user_id] || 'Someone', note: r.note });
+  });
+  const words = Object.values(byWord);
+  content.innerHTML = `
+    <div class="panel">
+      <h3>Reported words${words.length ? `<span class="count-badge">${words.length}</span>` : ''}</h3>
+      <p class="muted" style="margin:0 0 6px">Every word flagged with ⚑ in the app, from all students. Mark it Fixed once you've corrected it.</p>
+      ${words.length ? words.map((w, i) => `
+        <div class="report-row">
+          <div>
+            <span class="report-word">${esc(w.word)}</span><span class="report-english">${esc(w.english || '')}</span>
+            <div>${Object.entries(w.issues).map(([k, n]) => `<span class="issue-tag">${ISSUE_LABELS[k] || esc(k)}${n > 1 ? ' ×' + n : ''}</span>`).join('')}</div>
+            ${w.notes.map((n) => `<div class="report-note"><b>${esc(n.name)}:</b> ${esc(n.note)}</div>`).join('')}
+            <div class="report-note" style="color:#9c9382">Flagged by ${esc([...w.who].join(', '))} · ${new Date(w.latest).toLocaleString('en-GB', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })}</div>
+          </div>
+          <div class="report-actions">
+            <button data-allreport="${i}" data-status="fixed">Fixed</button>
+            <button class="secondary" data-allreport="${i}" data-status="dismissed">Not a problem</button>
+          </div>
+        </div>`).join('')
+      : '<p style="color:#9c9382; font-size:14px; margin:0">No reported words right now.</p>'}
+    </div>`;
+  content.querySelectorAll('[data-allreport]').forEach((btn) => {
+    btn.onclick = async () => {
+      const w = words[Number(btn.dataset.allreport)];
+      btn.disabled = true;
+      const { error: e } = await supabase.from('word_reports')
+        .update({ status: btn.dataset.status, resolved_at: new Date().toISOString(), resolved_by: currentUserId })
+        .in('id', w.ids);
+      if (e) { btn.disabled = false; alert('Could not update: ' + e.message); return; }
+      loadAllReports();
+    };
+  });
 }
 
 async function loadWordsPage() {
