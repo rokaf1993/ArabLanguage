@@ -85,6 +85,19 @@
   .invite-actions button { width: auto; padding: 10px 16px; display: inline-flex; align-items: center; gap: 8px; }
   .wa-btn { background: #25D366; color: #fff; }
   .copy-btn { background: transparent; border: 1px solid var(--border); color: #4a4438; font-weight: 500; }
+  .nav-tabs { display: none; gap: 8px; margin-bottom: 20px; }
+  .nav-tabs button { width: auto; padding: 9px 18px; background: transparent; border: 1px solid var(--border); color: #4a4438; font-weight: 500; }
+  .nav-tabs button.active { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+  textarea { width: 100%; min-height: 160px; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border); font-size: 15px; font-family: inherit; background: #fff; resize: vertical; }
+  .words-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 12px 0; }
+  .words-row select, .words-row input { width: auto; margin: 0; min-width: 220px; }
+  .words-row button { width: auto; padding: 10px 18px; }
+  .ar { direction: rtl; font-size: 18px; font-weight: 600; }
+  .muted { color: #9c9382; font-size: 13px; }
+  .status-new { color: var(--green-text); font-weight: 600; font-size: 12px; }
+  .status-skip { color: var(--amber-text); font-weight: 600; font-size: 12px; }
+  .status-bad { color: var(--red-text); font-weight: 600; font-size: 12px; }
+  .link-btn { background: none; border: none; color: #B71C1C; width: auto; padding: 0; font-size: 13px; font-weight: 500; cursor: pointer; }
   .count-badge { background: var(--red-bg); color: var(--red-text); border-radius: 10px; padding: 1px 8px; font-size: 12px; margin-left: 6px; }
 </style>
 </head>
@@ -112,6 +125,10 @@
   <div class="top-row">
     <h1 id="group-title">Halaqa — Teacher Dashboard</h1>
     <button id="logout-btn">Log out</button>
+  </div>
+  <div class="nav-tabs" id="nav-tabs">
+    <button id="tab-students" class="active">Students</button>
+    <button id="tab-words">Words</button>
   </div>
   <select id="group-select"></select>
   <div id="content"><p class="loading">Loading…</p></div>
@@ -262,12 +279,33 @@ document.getElementById('logout-btn').onclick = async () => {
   loginScreen.style.display = 'flex';
 };
 
+let currentUserId = null;
+let isAdmin = false;
 async function afterLogin() {
   const { data: { session } } = await supabase.auth.getSession();
   if (!session) return;
+  currentUserId = session.user.id;
   loginScreen.style.display = 'none';
   dashboard.style.display = 'block';
-  await loadMyGroups(session.user.id);
+  // Admins (listed in app_admins) also get the Words page.
+  const { data: adminRow } = await supabase.from('app_admins').select('user_id').eq('user_id', currentUserId).maybeSingle();
+  isAdmin = !!adminRow;
+  el('nav-tabs').style.display = isAdmin ? 'flex' : 'none';
+  el('tab-students').onclick = () => showTab('students');
+  el('tab-words').onclick = () => showTab('words');
+  showTab('students');
+}
+function showTab(tab) {
+  el('tab-students').classList.toggle('active', tab === 'students');
+  el('tab-words').classList.toggle('active', tab === 'words');
+  if (tab === 'words') {
+    groupSelect.style.display = 'none';
+    groupTitle.textContent = 'Halaqa — Words';
+    loadWordsPage();
+  } else {
+    groupTitle.textContent = 'Halaqa — Teacher Dashboard';
+    loadMyGroups(currentUserId);
+  }
 }
 
 // Restore session on page reload
@@ -285,6 +323,7 @@ async function loadMyGroups(userId) {
   }
   myGroups = data;
   groupSelect.style.display = 'block';
+  groupSelect.value = groupSelect.value || data[0].id;
   groupSelect.innerHTML = myGroups.map((g) => `<option value="${esc(g.id)}">${esc(g.name)}</option>`).join('');
   groupSelect.onchange = () => loadGroup(groupSelect.value);
   loadGroup(myGroups[0].id);
@@ -311,6 +350,166 @@ function formatLastActive(iso) {
   const hours = Math.floor(mins / 60);
   if (hours < 24) return `${hours}h ago`;
   return `${Math.floor(hours / 24)}d ago`;
+}
+
+// ---------- Words page: add your own flashcards ----------
+// Paste rows copied from a spreadsheet or a table in a document (columns
+// separated by tabs), or type one word per line as "Arabic — meaning".
+// A header row (Arabic / Root / Meaning / Note…) is recognised; without one,
+// columns are read as Arabic, Root, Meaning, Note (4 columns), Arabic,
+// Meaning, Note (3) or Arabic, Meaning (2). Saved to custom_words; the app
+// picks them up the next time it opens.
+const STANDARD_TOPICS = ['Family & People', 'Home & Housing', 'Work & Career', 'Hobbies & Sports', 'Travel & Directions',
+  'Food & Cooking', 'Clothing & Shopping', 'Education', 'Media & Technology', 'Weather & Environment', 'Health & Body', 'Arts & Culture'];
+const hasArabic = (t) => /[\u0600-\u06FF]/.test(t || '');
+const normWord = (t) => String(t || '').replace(/[\u064B-\u0652\u0670\u0640]/g, '').replace(/\s+/g, ' ').trim();
+let mainListWords = null; // words already in flashcards.json (to warn about duplicates)
+let customWordsCache = [];
+let parsedRows = [];
+
+function headerKey(h) {
+  const t = h.toLowerCase();
+  if (/arabic|word|كلمة/.test(t)) return 'word';
+  if (/root|جذر/.test(t)) return 'root';
+  if (/meaning|english|translation/.test(t)) return 'english';
+  if (/translit|pronunc/.test(t)) return 'transliteration';
+  if (/topic|theme|unit/.test(t)) return 'topic';
+  if (/fu|qur|note|link|comment|example/.test(t)) return 'note';
+  return null;
+}
+function parseWords(text) {
+  const lines = String(text || '').split(/\r?\n/).map((l) => l.replace(/\s+$/, '')).filter((l) => l.trim());
+  if (!lines.length) return [];
+  const splitLine = (l) => (l.includes('\t') ? l.split('\t') : l.split(/\s+[—–=]\s+|\s+-\s+/)).map((c) => c.trim());
+  let rows = lines.map(splitLine);
+  let keys = null;
+  if (!hasArabic(rows[0].join(' ')) || rows[0].some((c) => headerKey(c) === 'english' || headerKey(c) === 'root')) {
+    const guess = rows[0].map(headerKey);
+    if (guess.includes('word') || guess.includes('english')) { keys = guess; rows = rows.slice(1); }
+  }
+  return rows.map((cells) => {
+    const r = { word: '', root: '', english: '', note: '', transliteration: '', topic: '' };
+    if (keys && cells.length >= Math.min(keys.length, 3)) {
+      keys.forEach((k, i) => { if (k && cells[i] != null && !r[k]) r[k] = cells[i]; });
+    } else {
+      const c = cells.filter((x, i) => i < 6);
+      if (c.length >= 4) { [r.word, r.root, r.english, r.note] = c; }
+      else if (c.length === 3) { [r.word, r.english, r.note] = c; }
+      else { [r.word, r.english] = c; }
+      if (!hasArabic(r.word) && hasArabic(r.english)) { const t = r.word; r.word = r.english; r.english = t; }
+    }
+    Object.keys(r).forEach((k) => { r[k] = (r[k] || '').trim(); });
+    return r;
+  }).filter((r) => r.word || r.english);
+}
+
+async function loadWordsPage() {
+  content.innerHTML = '<p class="loading">Loading…</p>';
+  if (!mainListWords) {
+    try {
+      const res = await fetch('flashcards.json', { cache: 'no-store' });
+      mainListWords = new Set((await res.json()).map((c) => normWord(c.word)));
+    } catch (e) { mainListWords = new Set(); }
+  }
+  const { data, error } = await supabase.from('custom_words').select('id, word, english, root, note, topic, created_at').eq('active', true).order('created_at', { ascending: false });
+  customWordsCache = error ? [] : (data || []);
+  const customTopics = [...new Set(customWordsCache.map((w) => w.topic))].filter((t) => !STANDARD_TOPICS.includes(t));
+  const byTopic = {};
+  customWordsCache.forEach((w) => { (byTopic[w.topic] = byTopic[w.topic] || []).push(w); });
+
+  content.innerHTML = `
+    <div class="panel">
+      <h3>Add words</h3>
+      <p class="muted" style="margin:0 0 10px">Paste rows straight from a spreadsheet or a table in Word/Google Docs (Arabic, Root, Meaning, Note), or type one per line like <span class="ar" style="font-size:15px">مطار</span> — airport. They appear in everyone's app the next time it opens.</p>
+      <textarea id="words-input" placeholder="شاي\t\ttea\tFuṣḥā: شاي, the same\nالْحِساب\tح س ب\tthe bill\tيَوْمِ الْحِسابِ, the same word in the Qurʾān\n\nor:\nمطار — airport"></textarea>
+      <div class="words-row">
+        <select id="words-topic">
+          <optgroup label="Your topics">${customTopics.map((t) => `<option>${esc(t)}</option>`).join('')}</optgroup>
+          <optgroup label="App topics">${STANDARD_TOPICS.map((t) => `<option>${esc(t)}</option>`).join('')}</optgroup>
+          <option value="__new">➕ New topic…</option>
+        </select>
+        <input id="words-new-topic" placeholder="New topic name, e.g. Egyptian Arabic" maxlength="60" style="display:none">
+        <button id="words-preview">Preview</button>
+      </div>
+      <div id="words-preview-area"></div>
+    </div>
+    <div class="panel">
+      <h3>Your words (${customWordsCache.length})</h3>
+      ${customWordsCache.length ? Object.entries(byTopic).map(([topic, words]) => `
+        <p style="font-weight:600; margin:16px 0 6px">${esc(topic)} <span class="muted">(${words.length})</span></p>
+        <table>
+          <tr><th>Arabic</th><th>Meaning</th><th>Root</th><th>Note</th><th></th></tr>
+          ${words.map((w) => `<tr>
+            <td class="ar">${esc(w.word)}</td><td>${esc(w.english)}</td><td class="ar" style="font-size:15px">${esc(w.root || '')}</td>
+            <td class="muted">${esc(w.note || '')}</td>
+            <td style="text-align:right"><button class="link-btn" data-remove="${esc(w.id)}">Remove</button></td></tr>`).join('')}
+        </table>`).join('') : '<p class="muted" style="margin:0">No words added yet.</p>'}
+    </div>`;
+
+  const topicSel = el('words-topic');
+  if (!customTopics.length) topicSel.value = STANDARD_TOPICS[0];
+  topicSel.onchange = () => { el('words-new-topic').style.display = topicSel.value === '__new' ? 'block' : 'none'; };
+  el('words-preview').onclick = previewWords;
+  content.querySelectorAll('[data-remove]').forEach((b) => {
+    b.onclick = async () => {
+      const w = customWordsCache.find((x) => x.id === b.dataset.remove);
+      if (!confirm(`Remove "${w.word}" (${w.english}) from the app?`)) return;
+      const { error: err } = await supabase.from('custom_words').update({ active: false, updated_at: new Date().toISOString() }).eq('id', w.id);
+      if (err) { alert('Could not remove: ' + err.message); return; }
+      loadWordsPage();
+    };
+  });
+}
+
+function chosenTopic() {
+  const v = el('words-topic').value;
+  return v === '__new' ? el('words-new-topic').value.trim() : v;
+}
+
+function previewWords() {
+  const area = el('words-preview-area');
+  const topic = chosenTopic();
+  if (!topic) { area.innerHTML = '<p class="status-bad">Type a name for the new topic.</p>'; return; }
+  const existing = new Set(customWordsCache.map((w) => normWord(w.word)));
+  const seen = new Set();
+  parsedRows = parseWords(el('words-input').value).map((r) => {
+    const key = normWord(r.word);
+    let status = 'new', why = '';
+    if (!r.word || !hasArabic(r.word)) { status = 'bad'; why = 'no Arabic word'; }
+    else if (!r.english) { status = 'bad'; why = 'no meaning'; }
+    else if (existing.has(key)) { status = 'skip'; why = 'already in your words'; }
+    else if (mainListWords.has(key)) { status = 'skip'; why = 'already in the app'; }
+    else if (seen.has(key)) { status = 'skip'; why = 'listed twice'; }
+    seen.add(key);
+    return { ...r, topic: r.topic || topic, status, why };
+  });
+  if (!parsedRows.length) { area.innerHTML = '<p class="status-bad">Nothing to add — paste some words first.</p>'; return; }
+  const n = parsedRows.filter((r) => r.status === 'new').length;
+  area.innerHTML = `
+    <table>
+      <tr><th>Arabic</th><th>Meaning</th><th>Root</th><th>Note</th><th>Topic</th><th></th></tr>
+      ${parsedRows.map((r) => `<tr>
+        <td class="ar">${esc(r.word)}</td><td>${esc(r.english)}</td><td class="ar" style="font-size:15px">${esc(r.root)}</td>
+        <td class="muted">${esc(r.note)}</td><td class="muted">${esc(r.topic)}</td>
+        <td>${r.status === 'new' ? '<span class="status-new">New</span>' : `<span class="status-${r.status}">${esc(r.why)}</span>`}</td></tr>`).join('')}
+    </table>
+    <div class="words-row"><button id="words-save" ${n ? '' : 'disabled'}>Add ${n} word${n === 1 ? '' : 's'} to the app</button>
+    <span class="muted">${parsedRows.length - n ? (parsedRows.length - n) + ' skipped' : ''}</span></div>`;
+  const save = el('words-save');
+  if (save) save.onclick = saveWords;
+}
+
+async function saveWords() {
+  const rows = parsedRows.filter((r) => r.status === 'new').map((r) => ({
+    word: r.word, english: r.english, root: r.root || null, note: r.note || null,
+    transliteration: r.transliteration || null, topic: r.topic,
+  }));
+  const btn = el('words-save'); btn.disabled = true; btn.textContent = 'Adding…';
+  const { error } = await supabase.from('custom_words').insert(rows);
+  if (error) { btn.disabled = false; btn.textContent = 'Try again'; alert('Could not add words: ' + error.message); return; }
+  await loadWordsPage();
+  const area = el('words-preview-area');
+  area.innerHTML = `<p class="status-new" style="font-size:14px">✓ Added ${rows.length} word${rows.length === 1 ? '' : 's'}. They'll appear in the app next time it opens.</p>`;
 }
 
 // ---------- Invite students (WhatsApp / copy) ----------
